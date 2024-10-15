@@ -1,0 +1,322 @@
+[
+    {
+        "pokedex": 1,
+        "name": "bulbasaur",
+        "height": 0.7,
+        "weight": 6.9,
+        "category": "semilla",
+        "gender": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "eggGroup": ["monstruo", "planta"],
+        "growth": "parabolico",
+        "captureRatio": 45,
+        "friendship": 50,
+        "habitat": "pradera"
+    },  
+    {
+        "pokedex": 2,
+        "name": "ivysaur",
+        "height": 1.0,
+        "weght": 13.0,
+        "category": "planta",
+        "gender": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "eggGroup": ["monstruo", "planta"],
+        "growth": "parabolico",
+        "captureRatio": 45,
+        "friendship": 50,
+        "habitat": "pradera"
+    },
+    {
+        "pokedex": 3,
+        "name": "venusaur",
+        "height": 2.0,
+        "weight": 100.0,
+        "category": "planta",
+        "gender": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "eggGroup": ["monstruo", "planta"],
+        "growth": "parabolico",
+        "captureRatio": 45,
+        "friendship": 50,
+        "habitat": "pradera"
+    },    
+    {
+        "pokedex": 4,
+        "name": "charmander",
+        "height": 0.6,
+        "weight": 8.5,
+        "category": "lagarto",
+        "gender": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "eggGroup": ["monstruo", "campo"],
+        "growth": "parabolico",
+        "captureRatio": 45,
+        "friendship": 50,
+        "habitat": "montaña"
+    },     
+    {
+        "pokedex": 5,
+        "name": "charmeleon",
+        "height": 1.1,
+        "weight": 19.0,
+        "category": "lagarto",
+        "gender": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "eggGroup": ["monstruo", "campo"],
+        "growth": "parabolico",
+        "captureRatio": 45,
+        "friendship": 50,
+        "habitat": "montaña"
+    },     
+    {
+        "pokedex": 6,
+        "name": "charizard",
+        "height": 1.7,
+        "weight": 90.5,
+        "category": "lagarto",
+        "gender": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "eggGroup": ["monstruo", "volador"],
+        "growth": "parabolico",
+        "captureRatio": 45,
+        "friendship": 50,
+        "habitat": "montaña"
+    },  
+    {
+        "pokedex": 7,
+        "name": "squirtle",
+        "height": 0.5,
+        "weight": 9.0,
+        "category": "tortuga",
+        "gender": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "eggGroup": ["agua1", "monstruo"],
+        "growth": "parabolico",
+        "captureRatio": 45,
+        "friendship": 50,
+        "habitat": "agua dulce"
+    },      
+    {
+        "pokedex": 8,
+        "name": "wartortle",
+        "height": 1.0,
+        "weight": 22.5,
+        "category": "tortuga",
+        "gender": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "eggGroup": ["agua1", "monstruo"],
+        "growth": "parabolico",
+        "captureRatio": 45,
+        "friendship": 50,
+        "habitat": "agua dulce"
+    },      
+    {
+        "pokedex": 9,
+        "name": "blastoise",
+        "height": 1.6,
+        "weight": 85.5,
+        "category": "tortuga",
+        "gender": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "eggGroup": ["agua1", "monstruo"],
+        "growth": "parabolico",
+        "captureRatio": 45,
+        "friendship": 50,
+        "habitat": "agua dulce"
+    },      
+    {
+        "pokedex": 10,
+        "name": "caterpie",
+        "height": 0.3,
+        "weight": 2.9,
+        "category": "oruga",
+        "gender": {
+          "male": 50,
+          "female": 50
+        },
+        "eggGroup": ["bicho"],
+        "growth": "rapido",
+        "captureRatio": 255,
+        "friendship": 50,
+        "habitat": "bosque"
+    },
+    {
+        "pokedex": 11,
+        "name": "metapod",
+        "height": 0.7,
+        "weight": 9.9,
+        "category": "caparazón",
+        "gender": {
+          "male": 50,
+          "female": 50
+        },
+        "eggGroup": ["bicho"],
+        "growth": "rapido",
+        "captureRatio": 120,
+        "friendship": 50,
+        "habitat": "bosque"
+    }, 
+    {
+        "pokedex": 12,
+        "name": "butterfree",
+        "height": 1.1,
+        "weight": 32.0,
+        "category": "mariposa",
+        "gender": {
+          "male": 50,
+          "female": 50
+        },
+        "eggGroup": ["bicho", "volador"],
+        "growth": "rapido",
+        "captureRatio": 45,
+        "friendship": 50,
+        "habitat": "pradera"
+    },
+    {
+        "pokedex": 13,
+        "name": "weedle",
+        "height": 0.3,
+        "weight": 3.2,
+        "category": "gusano",
+        "gender": {
+          "male": 50,
+          "female": 50
+        },
+        "eggGroup": ["bicho", "planta"],
+        "growth": "rapido",
+        "captureRatio": 255,
+        "friendship": 50,
+        "habitat": "pradera"
+    },  
+    {
+        "pokedex": 14,
+        "name": "kakuna",
+        "height": 0.6,
+        "weight": 10.0,
+        "category": "cabeza de aguja",
+        "gender": {
+            "male": 50,
+            "female": 50
+        },
+        "eggGroup": ["bicho", "planta"],
+        "growth": "normal",
+        "captureRatio": 255,
+        "friendship": 50,
+        "habitat": "pradera"
+    },      
+    {
+        "pokedex": 15,
+        "name": "beedrill",
+        "height": 1.0,
+        "weight": 29.5,
+        "category": "abeja",
+        "gender": {
+          "male": 50,
+          "female": 50
+        },
+        "eggGroup": ["bicho"],
+        "growth": "rapido",
+        "captureRatio": 60,
+        "friendship": 50,
+        "habitat": "bosque"
+    },   
+    {
+        "pokedex": 16,
+        "name": "pidgey",
+        "height": 0.3,
+        "weight": 1.8,
+        "category": "pajaro",
+        "gender": {
+          "male": 50,
+          "female": 50
+        },
+        "eggGroup": ["volador"],
+        "growth": "normal",
+        "captureRatio": 50,
+        "friendship": 50,
+        "habitat": "campo"
+    },    
+    {
+        "pokedex": 17,
+        "name": "pidgeotto",
+        "height": 1.1,
+        "weight": 30.0,
+        "category": "pajaro",
+        "gender": {
+          "male": 50,
+          "female": 50
+        },
+        "eggGroup": ["volador"],
+        "growth": "normal",
+        "captureRatio": 45,
+        "friendship": 50,
+        "habitat": "campo"
+    },  
+    {
+        "pokedex": 18,
+        "name": "pidgeot",
+        "height": 1.5,
+        "weight": 39.5,
+        "category": "pajaro",
+        "gender": {
+          "male": 50,
+          "female": 50
+        },
+        "eggGroup": ["volador"],
+        "growth": "normal",
+        "captureRatio": 45,
+        "friendship": 50,
+        "habitat": "campo"
+    },          
+    {
+        "pokedex": 19,
+        "name": "rattata",
+        "height": 0.3,
+        "weight": 3.5,
+        "category": "raton",
+        "gender": {
+          "male": 50,
+          "female": 50
+        },
+        "eggGroup": ["campo"],
+        "growth": "rapido",
+        "captureRatio": 255,
+        "friendship": 70,
+        "habitat": "ciudad"
+    },      
+    {
+        "pokedex": 20,
+        "name": "raticate",
+        "height": 0.8,
+        "weight": 18.5,
+        "category": "raton",
+        "gender": {
+          "male": 50,
+          "female": 50
+        },
+        "eggGroup": ["campo"],
+        "growth": "rapido",
+        "captureRatio": 127,
+        "friendship": 70,
+        "habitat": "ciudad"
+    }      
+]

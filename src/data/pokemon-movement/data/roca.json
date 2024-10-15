@@ -1,0 +1,224 @@
+[
+    {
+        "name": "avalancha",
+        "class": "fisico",
+        "type": "roca",
+        "power": 60,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 20
+          }
+        ]
+    },
+    {
+        "name": "lanzarrocas",
+        "class": "fisico",
+        "type": "roca",
+        "power": 50
+    },
+    {
+        "name": "poder pasado",
+        "class": "especial",
+        "type": "roca",
+        "power": 80
+    },
+    {
+        "name": "rodar",
+        "class": "fisico",
+        "type": "roca",
+        "power": 30,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": 1,
+            "probability": 30
+          }
+        ]
+    },
+    {
+        "name": "tormenta de arena",
+        "class": "estado",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -10
+          }
+        ]
+    },     
+    {
+        "name": "pedrada",
+        "class": "fisico",
+        "type": "roca",
+        "power": 50
+    },
+    {
+        "name": "tumba rocas",
+        "class": "fisico",
+        "type": "roca",
+        "power": 60,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 20
+          }
+        ]
+    },
+    {
+        "name": "joya de luz",
+        "class": "especial",
+        "type": "roca",
+        "power": 80,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 2,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "pulimento",
+        "class": "estado",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1
+          }
+        ]
+    },
+    {
+        "name": "roca afilada",
+        "class": "fisico",
+        "type": "roca",
+        "power": 80,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 30
+          }
+        ]
+    },
+    {
+        "name": "romperrocas",
+        "class": "fisico",
+        "type": "roca",
+        "power": 100
+    },   
+    {
+        "name": "testarazo",
+        "class": "fisico",
+        "type": "roca",
+        "power": 70
+    },
+    {
+        "name": "trampa rocas",
+        "class": "estado",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "antiareo",
+        "class": "fisico",
+        "type": "roca",
+        "power": 90
+    },
+    {
+        "name": "vasta guardia",
+        "class": "estado",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 2,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "tormenta de diamantes",
+        "class": "especial",
+        "type": "roca",
+        "power": 150
+    },    
+    {
+        "name": "roca veloz",
+        "class": "fisico",
+        "type": "roca",
+        "power": 70
+    },
+    {
+        "name": "alquitranazo",
+        "class": "fisico",
+        "type": "roca",
+        "power": 60,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 30
+          }
+        ]
+    },
+    {
+        "name": "gigaroca ignea",
+        "class": "especial",
+        "type": "roca",
+        "power": 220
+    },
+    {
+        "name": "hachazo petreo",
+        "class": "fisico",
+        "type": "roca",
+        "power": 100
+    },
+    {
+        "name": "maxilito",
+        "class": "fisico",
+        "type": "roca",
+        "power": 80
+    },
+    {
+        "name": "rayo meteorico",
+        "class": "especial",
+        "type": "roca",
+        "power": 120
+    },  
+    {
+        "name": "filo potente",
+        "class": "fisico",
+        "type": "roca",
+        "power": 95,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "defense",
+            "points": -1,
+            "probability": 20
+          }
+        ]
+    },
+    {
+        "name": "salazon",
+        "class": "especial",
+        "type": "roca",
+        "power": 70
+    }      
+]

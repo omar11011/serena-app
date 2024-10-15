@@ -1,0 +1,324 @@
+[
+    {
+        "name": "ascuas",
+        "class": "especial",
+        "type": "fuego",
+        "power": 40,
+        "precision": 100
+    },    
+    {
+        "name": "giro fuego",
+        "class": "especial",
+        "type": "fuego",
+        "power": 35,
+        "precision": 85,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": ""
+            }
+        ]
+    },      
+    {
+        "name": "lanzallamas",
+        "class": "especial",
+        "type": "fuego",
+        "power": 90
+    },      
+    {
+        "name": "llamarada",
+        "class": "especial",
+        "type": "fuego",
+        "power": 110,
+        "precision": 85
+    },    
+    {
+        "name": "puño fuego",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 75
+    },        
+    {
+        "name": "dia soleado",
+        "class": "estado",
+        "type": "fuego"
+    },   
+    {
+        "name": "fuego sagrado",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 100,
+        "precision": 95
+    },  
+    {
+        "name": "rueda fuego",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 60
+    },     
+    {
+        "name": "anillo igneo",
+        "class": "especial",
+        "type": "fuego",
+        "power": 80
+    },            
+    {
+        "name": "estallido",
+        "class": "especial",
+        "type": "fuego",
+        "power": 150
+    },       
+    {
+        "name": "fuego fatuo",
+        "class": "estado",
+        "type": "fuego",
+        "precision": 85
+    },    
+    {
+        "name": "onda ignea",
+        "class": "especial",
+        "type": "fuego",
+        "power": 80,
+        "precision": 100
+    },     
+    {
+        "name": "patada ignea",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 85,
+        "precision": 90
+    },     
+    {
+        "name": "sofoco",
+        "class": "especial",
+        "type": "fuego",
+        "power": 130,
+        "precision": 90
+    },  
+    {
+        "name": "llama embrujada",
+        "class": "especial",
+        "type": "fuego",
+        "power": 65
+    },           
+    {
+        "name": "colmillo igneo",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 65,
+        "precision": 95
+    },      
+    {
+        "name": "envite igneo",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 120
+    },      
+    {
+        "name": "humareda",
+        "class": "especial",
+        "type": "fuego",
+        "power": 60,
+        "precision": 100
+    },      
+    {
+        "name": "lluvia ignea",
+        "class": "especial",
+        "type": "fuego",
+        "power": 95,
+        "precision": 100
+    },   
+    {
+        "name": "bomba ignea",
+        "class": "especial",
+        "type": "fuego",
+        "power": 110,
+        "precision": 85
+    },         
+    {
+        "name": "calcinacion",
+        "class": "especial",
+        "type": "fuego",
+        "power": 60,
+        "precision": 100
+    },   
+    {
+        "name": "danza llama",
+        "class": "especial",
+        "type": "fuego",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "golpe calor",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 100,
+        "precision": 100
+    },
+    {
+        "name": "infierno",
+        "class": "especial",
+        "type": "fuego",
+        "power": 100,
+        "precision": 50
+    },
+    {
+        "name": "llama azul",
+        "class": "especial",
+        "type": "fuego",
+        "power": 130,
+        "precision": 85
+    },
+    {
+        "name": "llama fusion",
+        "class": "especial",
+        "type": "fuego",
+        "power": 100,
+        "precision": 100
+    },
+    {
+        "name": "nitrocarga",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 50,
+        "precision": 100
+    }, 
+    {
+        "name": "pirotecnia",
+        "class": "especial",
+        "type": "fuego",
+        "power": 100,
+        "precision": 100
+    },
+    {
+        "name": "v de fuego",
+        "class": "especial",
+        "type": "fuego",
+        "power": 180,
+        "precision": 95
+    },
+    {
+        "name": "voto fuego",
+        "class": "especial",
+        "type": "fuego",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "cabeza sorpresa",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 150,
+        "precision": 100
+    },
+    {
+        "name": "coraza trampa",
+        "class": "especial",
+        "type": "fuego",
+        "power": 150,
+        "precision": 100
+    },              
+    {
+        "name": "flarembestida",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 120,
+        "precision": 100
+    },
+    {
+        "name": "latigo igneo",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "llama final",
+        "class": "especial",
+        "type": "fuego",
+        "power": 130,
+        "precision": 90
+    },
+    {
+        "name": "balon igneo",
+        "class": "especial",
+        "type": "fuego",
+        "power": 150,
+        "precision": 100
+    },
+    {
+        "name": "envidia ardiente",
+        "class": "especial",
+        "type": "fuego",
+        "power": 70,
+        "precision": 100
+    },
+    {
+        "name": "erupcion de ira",
+        "class": "especial",
+        "type": "fuego",
+        "power": 110,
+        "precision": 90
+    },    
+    {
+        "name": "gigacienfuegos",
+        "class": "especial",
+        "type": "fuego",
+        "power": 220
+    },
+    {
+        "name": "gigaesfera ignea",
+        "class": "especial",
+        "type": "fuego",
+        "power": 240
+    },
+    {
+        "name": "gigallamarada",
+        "class": "especial",
+        "type": "fuego",
+        "power": 210
+    },
+    {
+        "name": "maxignicion",
+        "class": "especial",
+        "type": "fuego",
+        "power": 230
+    },
+    {
+        "name": "canto ardiente",
+        "class": "estado",
+        "type": "fuego"
+    },
+    {
+        "name": "cañon armadura",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 100
+    },
+    {
+        "name": "colera ardiente",
+        "class": "especial",
+        "type": "fuego",
+        "power": 130
+    },
+    {
+        "name": "espada lamento",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 110
+    },
+    {
+        "name": "llama protectora",
+        "class": "estado",
+        "type": "fuego"
+    },
+    {
+        "name": "pirochoque",
+        "class": "fisico",
+        "type": "fuego",
+        "power": 150
+    }    
+]

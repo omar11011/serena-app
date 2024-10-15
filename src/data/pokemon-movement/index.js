@@ -1,0 +1,23 @@
+module.exports = {
+    Class: require('./class'),
+    Data: [
+        ...require('./data/acero.json'),
+        ...require('./data/agua.json'),
+        ...require('./data/bicho.json'),
+        ...require('./data/dragon.json'),
+        ...require('./data/electrico.json'),
+        ...require('./data/fantasma.json'),
+        ...require('./data/fuego.json'),
+        ...require('./data/hada.json'),
+        ...require('./data/hielo.json'),
+        ...require('./data/lucha.json'),
+        ...require('./data/normal.json'),
+        ...require('./data/planta.json'),
+        ...require('./data/psiquico.json'),
+        ...require('./data/roca.json'),
+        ...require('./data/siniestro.json'),
+        ...require('./data/tierra.json'),
+        ...require('./data/veneno.json'),
+        ...require('./data/volador.json'),
+    ],
+}

@@ -1,0 +1,432 @@
+[
+    {
+        "name": "mordisco",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 60
+    },
+    {
+        "name": "finta",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 60,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "ladron",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 60,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1
+          }
+        ]
+    },
+    {
+        "name": "paliza",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 70,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 30
+          }
+        ]
+    },
+    {
+        "name": "persecucion",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 40
+    },
+    {
+        "name": "triturar",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 80
+    },  
+    {
+        "name": "camelo",
+        "class": "estado",
+        "type": "siniestro",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "evasion",
+            "points": 10,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "desarme",
+        "class": "estado",
+        "type": "siniestro",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "legado",
+        "class": "estado",
+        "type": "siniestro"
+    },
+    {
+        "name": "llanto falso",
+        "class": "estado",
+        "type": "siniestro",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spdefense",
+            "points": -1,
+            "probability": 30
+          }
+        ]
+    },
+    {
+        "name": "mofa",
+        "class": "estado",
+        "type": "siniestro"
+    },
+    {
+        "name": "robo",
+        "class": "estado",
+        "type": "siniestro",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 2,
+            "probability": 40
+          }
+        ]
+    },
+    {
+        "name": "tormento",
+        "class": "estado",
+        "type": "siniestro",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spattack",
+            "points": -1,
+            "probability": 50
+          }
+        ]
+    },    
+    {
+        "name": "brecha negra",
+        "class": "especial",
+        "type": "siniestro",
+        "power": 100,
+        "precision": 80
+    },
+    {
+        "name": "buena baza",
+        "class": "estado",
+        "type": "siniestro",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "castigo",
+        "class": "especial",
+        "type": "siniestro",
+        "power": 100
+    },
+    {
+        "name": "embargo",
+        "class": "estado",
+        "type": "siniestro"
+    },
+    {
+        "name": "golpe bajo",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 20,
+        "priority": 1
+    },
+    {
+        "name": "lanzamiento",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 30
+    },
+    {
+        "name": "maquinacion",
+        "class": "estado",
+        "type": "siniestro",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spattack",
+            "points": 2,
+            "probability": 30
+          }
+        ]
+    },  
+    {
+        "name": "pulso umbrio",
+        "class": "especial",
+        "type": "siniestro",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "tajo umbrio",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 70
+    },
+    {
+        "name": "trapicheo",
+        "class": "estado",
+        "type": "siniestro"
+    },
+    {
+        "name": "vendetta",
+        "class": "especial",
+        "type": "siniestro",
+        "power": 50,
+        "precision": 100
+    },
+    {
+        "name": "afilagarras",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 70,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 30
+          }
+        ]
+    },
+    {
+        "name": "alarido",
+        "class": "estado",
+        "type": "siniestro",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spdefense",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },    
+    {
+        "name": "juego sucio",
+        "class": "estado",
+        "type": "siniestro",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "pulso noche",
+        "class": "especial",
+        "type": "siniestro",
+        "power": 80
+    },
+    {
+        "name": "ultimo lugar",
+        "class": "estado",
+        "type": "siniestro"
+    },
+    {
+        "name": "cerco dimension",
+        "class": "especial",
+        "type": "siniestro",
+        "power": 90,
+        "precision": 95
+    },
+    {
+        "name": "reversion",
+        "class": "estado",
+        "type": "siniestro",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 40
+          },
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 40
+          }
+        ]
+    },
+    {
+        "name": "ultima palabra",
+        "class": "especial",
+        "type": "siniestro",
+        "power": 100
+    },    
+    {
+        "name": "chuleria",
+        "class": "estado",
+        "type": "siniestro"
+    },
+    {
+        "name": "giro vil",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 70,
+        "precision": 95
+    },
+    {
+        "name": "golpe mordaza",
+        "class": "especial",
+        "type": "siniestro",
+        "power": 90
+    },
+    {
+        "name": "lariat oscuro",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 85
+    },
+    {
+        "name": "umbreozona",
+        "class": "estado",
+        "type": "siniestro",
+        "power": 110
+    },    
+    {
+        "name": "desahogo",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 75
+    },
+    {
+        "name": "furia candente",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 130
+    },
+    {
+        "name": "gigagolpe brusco",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 250
+    },
+    {
+        "name": "gigasopor",
+        "class": "especial",
+        "type": "siniestro",
+        "power": 210
+    },
+    {
+        "name": "golpe oscuro",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 80,
+        "precision": 95
+    },
+    {
+        "name": "irreverencia",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 85
+    },
+    {
+        "name": "maxisombra",
+        "class": "especial",
+        "type": "siniestro",
+        "power": 200
+      },
+    {
+        "name": "obstruccion",
+        "class": "estado",
+        "type": "siniestro",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -40,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "presa maxilar",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 90
+    },
+    {
+        "name": "tajo metralla",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 70,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "defense",
+            "points": -1,
+            "probability": 30
+          }
+        ]
+    },
+    {
+        "name": "calamidad",
+        "class": "especial",
+        "type": "siniestro",
+        "power": 110,
+        "precision": 85
+    },   
+    {
+        "name": "genufendiente",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 90
+    },
+    {
+        "name": "ominochoque",
+        "class": "especial",
+        "type": "siniestro",
+        "power": 80
+    },
+    {
+        "name": "resarcimiento",
+        "class": "fisico",
+        "type": "siniestro",
+        "power": 85
+    }      
+]

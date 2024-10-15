@@ -1,0 +1,289 @@
+[
+    {
+        "name": "ataque aereo",
+        "class": "fisico",
+        "type": "volador",
+        "power": 60
+    },
+    {
+        "name": "ataque ala",
+        "class": "fisico",
+        "type": "volador",
+        "power": 40
+    },
+    {
+        "name": "espejo",
+        "class": "estado",
+        "type": "volador",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 2,
+            "probability": 30
+          }
+        ]
+    },
+    {
+        "name": "pico taladro",
+        "class": "fisico",
+        "type": "volador",
+        "power": 80
+    },
+    {
+        "name": "picotazo",
+        "class": "fisico",
+        "type": "volador",
+        "power": 50
+    },
+    {
+        "name": "tornado",
+        "class": "especial",
+        "type": "volador",
+        "power": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -10,
+            "probability": 20
+          }
+        ]
+    },
+    {
+        "name": "vuelo",
+        "class": "fisico",
+        "type": "volador",
+        "power": 90
+    },   
+    {
+        "name": "aerochorro",
+        "class": "especial",
+        "type": "volador",
+        "power": 70
+    },
+    {
+        "name": "aire afilado",
+        "class": "especial",
+        "type": "volador",
+        "power": 55
+    },
+    {
+        "name": "bote",
+        "class": "fisico",
+        "type": "volador",
+        "power": 30,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 25
+          }
+        ]
+    },
+    {
+        "name": "danza pluma",
+        "class": "estado",
+        "type": "volador",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "golpe aereo",
+        "class": "fisico",
+        "type": "volador",
+        "power": 75
+    },     
+    {
+        "name": "chachara",
+        "class": "estado",
+        "type": "volador",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spdefense",
+            "points": 1,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "despejar",
+        "class": "estado",
+        "type": "volador",
+        "power": 0,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "accuracy",
+                "points": 50
+            },
+            {
+                "toUser": true,
+                "stat": "evasion",
+                "points": 50
+            }
+        ]
+    },
+    {
+        "name": "pajaro osado",
+        "class": "fisico",
+        "type": "volador",
+        "power": 120,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "picoteo",
+        "class": "fisico",
+        "type": "volador",
+        "power": 40
+    },
+    {
+        "name": "respiro",
+        "class": "estado",
+        "type": "volador",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 2,
+            "probability": 80
+          }
+        ]
+    },
+    {
+        "name": "tajo aereo",
+        "class": "fisico",
+        "type": "volador",
+        "power": 85
+    },
+    {
+        "name": "viento afin",
+        "class": "estado",
+        "type": "volador",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    }, 
+    {
+        "name": "acrobata",
+        "class": "fisico",
+        "type": "volador",
+        "power": 55,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "caida libre",
+        "class": "fisico",
+        "type": "volador",
+        "power": 70
+    },
+    {
+        "name": "vendaval",
+        "class": "especial",
+        "type": "volador",
+        "power": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "ala mortifera",
+        "class": "fisico",
+        "type": "volador",
+        "power": 100
+    },
+    {
+        "name": "ascenso draco",
+        "class": "especial",
+        "type": "volador",
+        "power": 90,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "spattack",
+                "points": 1
+            }
+        ]
+    },       
+    {
+        "name": "pico cañon",
+        "class": "fisico",
+        "type": "volador",
+        "power": 90
+    },
+    {
+        "name": "pikapicado",
+        "class": "fisico",
+        "type": "volador",
+        "power": 90
+    },
+    {
+        "name": "ala bis",
+        "class": "especial",
+        "type": "volador",
+        "power": 70
+    },
+    {
+        "name": "gigahuracan",
+        "class": "especial",
+        "type": "volador",
+        "power": 250
+    },
+    {
+        "name": "maxiciclon",
+        "class": "especial",
+        "type": "volador",
+        "power": 240
+    },
+    {
+        "name": "vendaval gelido",
+        "class": "especial",
+        "type": "volador",
+        "power": 110,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -2,
+            "probability": 60
+          }
+        ]
+    }         
+]

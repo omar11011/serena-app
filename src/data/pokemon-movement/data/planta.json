@@ -1,0 +1,553 @@
+[
+    {
+        "name": "absorber",
+        "class": "especial",
+        "type": "planta",
+        "power": 20,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "danza petalo",
+        "class": "estado",
+        "type": "planta",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spattack",
+            "points": 2,
+            "probability": 100
+          },
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "drenadoras",
+        "class": "especial",
+        "type": "planta",
+        "power": 80,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "espora",
+        "class": "estado",
+        "type": "planta"
+    },
+    {
+        "name": "hoja afilada",
+        "class": "fisico",
+        "type": "planta",
+        "power": 60,
+        "precision": 100
+    },
+    {
+        "name": "latigo cepa",
+        "class": "fisico",
+        "type": "planta",
+        "power": 45,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "megaagotar",
+        "class": "especial",
+        "type": "planta",
+        "power": 80,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "paralizador",
+        "class": "estado",
+        "type": "planta"
+    },
+    {
+        "name": "rayo solar",
+        "class": "especial",
+        "type": "planta",
+        "power": 130,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spattack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "somnifero",
+        "class": "estado",
+        "type": "planta"
+    },   
+    {
+        "name": "esporagodon",
+        "class": "estado",
+        "type": "planta"
+    },
+    {
+        "name": "gigadrenado",
+        "class": "especial",
+        "type": "planta",
+        "power": 75,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "sintesis",
+        "class": "estado",
+        "type": "planta",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "aromaterapia",
+        "class": "estado",
+        "type": "planta"
+    },
+    {
+        "name": "arraigo",
+        "class": "estado",
+        "type": "planta",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "brazo pincho",
+        "class": "fisico",
+        "type": "planta",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "hoja aguda",
+        "class": "fisico",
+        "type": "planta",
+        "power": 60,
+        "precision": 100
+    }, 
+    {
+        "name": "hoja magica",
+        "class": "especial",
+        "type": "planta",
+        "power": 60
+    },
+    {
+        "name": "planta feroz",
+        "class": "fisico",
+        "type": "planta",
+        "power": 120
+    },
+    {
+        "name": "semilladora",
+        "class": "estado",
+        "type": "planta"
+    },
+    {
+        "name": "silbato",
+        "class": "estado",
+        "type": "planta",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    }, 
+    {
+        "name": "abatidoras",
+        "class": "especial",
+        "type": "planta",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "bomba germen",
+        "class": "especial",
+        "type": "planta",
+        "power": 90,
+        "precision": 100
+    },
+    {
+        "name": "energibola",
+        "class": "especial",
+        "type": "planta",
+        "power": 90,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spdefense",
+            "points": -1,
+            "probability": 10
+          }
+        ]
+    },
+    {
+        "name": "fulgor semilla",
+        "class": "especial",
+        "type": "planta",
+        "power": 90,
+        "precision": 100
+    },
+    {
+        "name": "hierba lazo",
+        "class": "estado",
+        "type": "planta",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "hp",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "latigazo",
+        "class": "fisico",
+        "type": "planta",
+        "power": 55,
+        "precision": 95
+    }, 
+    {
+        "name": "lluevehojas",
+        "class": "especial",
+        "type": "planta",
+        "power": 60,
+        "precision": 100
+    },
+    {
+        "name": "mazazo",
+        "class": "fisico",
+        "type": "planta",
+        "power": 100,
+        "precision": 85
+    },
+    {
+        "name": "asta drenaje",
+        "class": "especial",
+        "type": "planta",
+        "power": 70
+    },
+    {
+        "name": "ciclo de hojas",
+        "class": "especial",
+        "type": "planta",
+        "power": 60,
+        "precision": 100
+    },
+    {
+        "name": "rizo algodon",
+        "class": "estado",
+        "type": "planta",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spdefense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "voto planta",
+        "class": "estado",
+        "type": "planta",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1
+          }
+        ]
+    },  
+    {
+        "name": "barrera espinosa",
+        "class": "estado",
+        "type": "planta",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1
+          }
+        ]
+    },
+    {
+        "name": "campo de hierba",
+        "class": "estado",
+        "type": "planta"
+    },
+    {
+        "name": "condena silvana",
+        "class": "especial",
+        "type": "planta",
+        "power": 120,
+        "precision": 75
+    },
+    {
+        "name": "tormenta floral",
+        "class": "especial",
+        "type": "planta",
+        "power": 110,
+        "precision": 90
+    },  
+    {
+        "name": "absorbefuerza",
+        "class": "especial",
+        "type": "planta",
+        "power": 20
+    },
+    {
+        "name": "cuchillada solar",
+        "class": "fisico",
+        "type": "planta",
+        "power": 60,
+        "precision": 100
+    },
+    {
+        "name": "follaje",
+        "class": "especial",
+        "type": "planta",
+        "power": 70,
+        "precision": 100
+    },
+    {
+        "name": "leafitobombas",
+        "class": "especial",
+        "type": "planta",
+        "power": 90,
+        "precision": 100
+    },
+    {
+        "name": "patada tropical",
+        "class": "fisico",
+        "type": "planta",
+        "power": 85,
+        "precision": 95
+    },
+    {
+        "name": "acido malico",
+        "class": "especial",
+        "type": "planta",
+        "power": 40,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "defense",
+            "points": -1,
+            "probability": 30
+          }
+        ]
+    },
+    {
+        "name": "bateria asalto",
+        "class": "estado",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "cepo",
+        "class": "estado",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "clorofilaser",
+        "class": "especial",
+        "type": "planta",
+        "power": 70,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1
+          }
+        ]
+    },
+    {
+        "name": "cura selvatica",
+        "class": "estado",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "fitoimpulso",
+        "class": "especial",
+        "type": "planta",
+        "power": 50,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1
+          }
+        ]
+    }, 
+    {
+        "name": "fuerza g",
+        "class": "especial",
+        "type": "planta",
+        "power": 90,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "defense",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "gigacorrosion",
+        "class": "especial",
+        "type": "planta",
+        "power": 220
+    },
+    {
+        "name": "gigalianas",
+        "class": "estado",
+        "Power": 220
+    },
+    {
+        "name": "giganectar",
+        "class": "especial",
+        "type": "planta",
+        "power": 210
+    },
+    {
+        "name": "gigarredoble",
+        "class": "especial",
+        "type": "planta",
+        "power": 80,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spattack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "maxiflora",
+        "class": "estado",
+        "power": 210
+    },
+    {
+        "name": "punzada rama",
+        "class": "fisico",
+        "type": "planta",
+        "power": 70
+    }, 
+    {
+        "name": "abrecaminos",
+        "class": "estado",
+        "type": "planta",
+        "power": 50
+    },
+    {
+        "name": "bomba caramelo",
+        "class": "especial",
+        "type": "planta",
+        "power": 60
+    },
+    {
+        "name": "cañon batidor",
+        "class": "especial",
+        "type": "planta",
+        "power": 80
+    },
+    {
+        "name": "extracto picante",
+        "class": "especial",
+        "type": "planta",
+        "power": 70
+    },
+    {
+        "name": "garrote liana",
+        "class": "fisico",
+        "type": "planta",
+        "power": 100
+    },
+    {
+        "name": "truco floral",
+        "class": "estado",
+        "type": "planta",
+        "power": 70
+    }         
+]

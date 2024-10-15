@@ -1,0 +1,417 @@
+[
+    {
+        "name": "impactrueno",
+        "class": "especial",
+        "type": "electrico",
+        "power": 60,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 50
+            }
+        ]
+    },      
+    {
+        "name": "onda trueno",
+        "class": "especial",
+        "type": "electrico",
+        "power": 80
+    },      
+    {
+        "name": "puño trueno",
+        "class": "físico",
+        "type": "electrico",
+        "power": 75,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 30
+            }
+        ]
+    },      
+    {
+        "name": "rayo",
+        "class": "especial",
+        "type": "electrico",
+        "power": 90
+    },   
+    {
+        "name": "trueno",
+        "class": "especial",
+        "type": "electrico",
+        "power": 110,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 50
+            }
+        ]
+    },
+    {
+        "name": "chispa",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 65,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": 0.3
+            }
+        ]
+    },      
+    {
+        "name": "electrocañon",
+        "class": "especial",
+        "type": "electrico",
+        "power": 120,
+        "precision": 50,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1
+          }
+        ]
+    },      
+    {
+        "name": "carga",
+        "class": "estado",
+        "type": "electrico",
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "spdefense",
+                "points": 1
+            }
+        ]
+    },    
+    {
+        "name": "onda voltio",
+        "class": "especial",
+        "type": "electrico",
+        "power": 90
+    },        
+    {
+        "name": "placaje electrico",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 90,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": 0.1
+            }
+        ]
+    },
+    {
+        "name": "chispazo",
+        "class": "especial",
+        "type": "electrico",
+        "power": 80,
+        "precision": 100
+    },      
+    {
+        "name": "colmillo rayo",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 65,
+        "precision": 95,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": 0.1
+            },
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 0.1
+            }
+        ]
+    },      
+    {
+        "name": "leviton",
+        "class": "estado",
+        "type": "electrico"
+    },      
+    {
+        "name": "rayo carga",
+        "class": "especial",
+        "type": "electrico",
+        "power": 50,
+        "precision": 90,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "spattack",
+                "points": 1,
+                "probability": 0.7
+            }
+        ]
+    },    
+    {
+        "name": "ataque fulgor",
+        "class": "especial",
+        "type": "electrico",
+        "power": 90
+    },
+    {
+        "name": "bola voltio",
+        "class": "especial",
+        "type": "electrico",
+        "power": 60,
+        "precision": 100
+    },
+    {
+        "name": "electrotela",
+        "class": "especial",
+        "type": "electrico",
+        "power": 55,
+        "precision": 95,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1
+            }
+        ]
+    },  
+    {
+        "name": "rayo fusion",
+        "class": "especial",
+        "type": "electrico",
+        "power": 100,
+        "precision": 100
+    },
+    {
+        "name": "voltio cruel",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 90
+    },
+    {
+        "name": "voltiocambio",
+        "class": "especial",
+        "type": "electrico",
+        "power": 70
+    },   
+    {
+        "name": "aura magnetica",
+        "class": "estado",
+        "type": "electrico"
+    },
+    {
+        "name": "campo electrico",
+        "class": "estado",
+        "type": "electrico"
+    },
+    {
+        "name": "carga parabola",
+        "class": "especial",
+        "type": "electrico",
+        "power": 50,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "hp",
+                "points": 0.5
+            }
+        ]
+    },   
+    {
+        "name": "cortina plasma",
+        "class": "especial",
+        "type": "electrico",
+        "power": 100
+    },
+    {
+        "name": "electrificacion",
+        "class": "estado",
+        "type": "electrico"
+    },   
+    {
+        "name": "moflete estatico",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 40,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": 1.0
+            }
+        ]
+    },    
+    {
+        "name": "onda anomala",
+        "class": "especial",
+        "type": "electrico",
+        "power": 90
+    },    
+    {
+        "name": "electropunzada",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 80,
+        "precision": 90
+    },   
+    {
+        "name": "joltioparalisis",
+        "class": "especial",
+        "type": "electrico",
+        "power": 100,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": 0.3
+            }
+        ]
+    }, 
+    {
+        "name": "pikatormenta",
+        "class": "especial",
+        "type": "electrico",
+        "power": 95,
+        "precision": 90
+    },  
+    {
+        "name": "pikaturbo",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 90
+    },        
+    {
+        "name": "puños plasma",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 100
+    },    
+    {
+        "name": "alto voltaje",
+        "class": "especial",
+        "type": "electrico",
+        "power": 120,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": 0.1
+            }
+        ]
+    },        
+    {
+        "name": "amplificador",
+        "class": "estado",
+        "type": "electrico",
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "spattack",
+                "points": 1,
+                "probability": 0.5
+            }
+        ]
+    },     
+    {
+        "name": "electormenta",
+        "class": "especial",
+        "type": "electrico",
+        "power": 95
+    },     
+    {
+        "name": "electrojaula",
+        "class": "estado",
+        "type": "electrico",
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -2,
+                "probability": 0.7
+            }
+        ]
+    },    
+    {
+        "name": "electropico",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 80
+    },
+    {
+        "name": "gigadescarga",
+        "class": "especial",
+        "type": "electrico",
+        "power": 240
+    },         
+    {
+        "name": "gigatronada",
+        "class": "especial",
+        "type": "electrico",
+        "power": 220
+    },
+    {
+        "name": "maxitormenta",
+        "class": "especial",
+        "type": "electrico",
+        "power": 150
+    },     
+    {
+        "name": "rueda aural",
+        "class": "estado",
+        "type": "electrico",
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "speed",
+                "points": 2,
+                "probability": 0.3
+            }
+        ]
+    },     
+    {
+        "name": "electroderrape",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 90
+    },
+    {
+        "name": "electropalmas",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 75
+    },
+    {
+        "name": "electrorrayo",
+        "class": "especial",
+        "type": "electrico",
+        "power": 130
+    },    
+    {
+        "name": "plancha voltaica",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 100
+    },  
+    {
+        "name": "relampago subito",
+        "class": "fisico",
+        "type": "electrico",
+        "power": 70
+    }                                                                                                        
+]

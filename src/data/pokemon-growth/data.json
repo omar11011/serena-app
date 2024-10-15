@@ -1,0 +1,20 @@
+[
+    {
+        "name": "parabolico"
+    },
+    {
+        "name": "normal"
+    },
+    {
+        "name": "rapido"
+    },
+    {
+        "name": "lento"
+    },
+    {
+        "name": "fluctuante"
+    },
+    {
+        "name": "erratico"
+    }
+]

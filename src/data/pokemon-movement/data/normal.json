@@ -1,0 +1,1921 @@
+[
+    {
+        "name":"afilar",
+        "class":"fisico",
+        "type":"normal"
+    },
+    {
+        "name":"agarre",
+        "class":"fisico",
+        "type":"normal",
+        "effects":[
+            {
+                "toUser":true,
+                "stat":"hp",
+                "points":-2
+            }
+        ]
+    },
+    {
+        "name":"anulacion",
+        "class":"estado",
+        "type":"normal"
+    },
+    {
+        "name":"arañazo",
+        "class":"fisico",
+        "type":"normal",
+        "power":40
+    },
+    {
+        "name":"atadura",
+        "class":"estado",
+        "type":"normal"
+    },
+    {
+        "name":"ataque furia",
+        "class":"fisico",
+        "type":"normal",
+        "power":15,
+        "hits":2
+    },
+    {
+        "name":"ataque rapido",
+        "class":"fisico",
+        "type":"normal",
+        "power":40,
+        "priority":1
+    },
+    {
+        "name":"atizar",
+        "class":"fisico",
+        "type":"normal",
+        "power":50
+    },
+    {
+        "name":"beso amoroso",
+        "class":"estado",
+        "type":"normal"
+    },
+    {
+        "name": "bomba huevo",
+        "class": "especial",
+        "type": "normal",
+        "power": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "hp",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "bomba sonica",
+        "class": "especial",
+        "type": "normal",
+        "power": 80
+    },
+    {
+        "name": "bombardeo",
+        "class": "fisico",
+        "type": "normal",
+        "power": 120
+    },
+    {
+        "name": "cabezazo",
+        "class": "fisico",
+        "type": "normal",
+        "power": 70
+    },
+    {
+        "name": "canto",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "hp",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "chirrido",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "defense",
+            "points": -1,
+            "probability": 85
+          }
+        ]
+    },
+    {
+        "name": "clavo cañon",
+        "class": "especial",
+        "type": "normal",
+        "power": 120
+    },
+    {
+        "name": "constriccion",
+        "class": "fisico",
+        "type": "normal",
+        "power": 35,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "hp",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "conversion",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "cornada",
+        "class": "fisico",
+        "type": "normal",
+        "power": 80
+    },
+    {
+        "name": "corte",
+        "class": "fisico",
+        "type": "normal",
+        "power": 70
+    },
+    {
+        "name": "cuchillada",
+        "class": "fisico",
+        "type": "normal",
+        "power": 60
+    },
+    {
+        "name": "danza espada",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },    
+    {
+        "name": "derribo",
+        "class": "fisico",
+        "type": "normal",
+        "power": 90
+    },
+    {
+        "name": "desarrollo",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          },
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "deslumbrar",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "destello",
+        "class": "especial",
+        "type": "normal",
+        "power": 30
+    },
+    {
+        "name": "destructor",
+        "class": "fisico",
+        "type": "normal",
+        "power": 130
+    },
+    {
+        "name": "dia de pago",
+        "class": "especial",
+        "type": "normal",
+        "power": 75,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },  
+    {
+        "name": "doble bofeton",
+        "class": "fisico",
+        "type": "normal",
+        "power": 30,
+        "hits": 2
+    },
+    {
+        "name": "doble equipo",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "evasion",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "doble filo",
+        "class": "fisico",
+        "type": "normal",
+        "power": 35
+    },
+    {
+        "name": "explosion",
+        "class": "fisico",
+        "type": "normal",
+        "power": 250,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": -100,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "foco energia",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spattack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "forcejeo",
+        "class": "fisico",
+        "type": "normal",
+        "power": 50
+    },
+    {
+        "name": "fortaleza",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          },
+          {
+            "toUser": true,
+            "stat": "spdefense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },   
+    {
+        "name": "fuerza",
+        "class": "fisico",
+        "type": "normal",
+        "power": 80
+    },
+    {
+        "name": "furia",
+        "class": "fisico",
+        "type": "normal",
+        "power": 15,
+        "hits": 5
+    },
+    {
+        "name": "golpe cabeza",
+        "class": "fisico",
+        "type": "normal",
+        "power": 70
+    },
+    {
+        "name": "golpe cuerpo",
+        "class": "fisico",
+        "type": "normal",
+        "power": 70
+    },
+    {
+        "name": "golpes furia",
+        "class": "fisico",
+        "type": "normal",
+        "power": 15,
+        "hits": 5
+    },
+    {
+        "name": "gruñido",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "guillotina",
+        "class": "fisico",
+        "type": "normal",
+        "power": 80,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "hp",
+            "points": -1,
+            "probability": 30
+          }
+        ]
+    },    
+    {
+        "name": "hipercolmillo",
+        "class": "fisico",
+        "type": "normal",
+        "power": 80
+    },
+    {
+        "name": "hiperrayo",
+        "class": "especial",
+        "type": "normal",
+        "power": 150,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spattack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "latigo",
+        "class": "fisico",
+        "type": "normal",
+        "power": 20,
+        "hits": 2
+    },
+    {
+        "name": "malicioso",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          },
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "megapatada",
+        "class": "fisico",
+        "type": "normal",
+        "power": 100
+    },
+    {
+        "name": "megapuño",
+        "class": "fisico",
+        "type": "normal",
+        "power": 100
+    },
+    {
+        "name": "meteoros",
+        "class": "fisico",
+        "type": "normal",
+        "power": 100,
+        "hits": 2
+    },
+    {
+        "name": "metronomo",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "mimetico",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "ovocuracion",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "pantalla de humo",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "perforador",
+        "class": "fisico",
+        "type": "normal",
+        "power": 80
+    },
+    {
+        "name": "pisoton",
+        "class": "fisico",
+        "type": "normal",
+        "power": 65
+    },
+    {
+        "name": "placaje",
+        "class": "fisico",
+        "type": "normal",
+        "power": 35
+    }, 
+    {
+        "name": "puño cometa",
+        "class": "fisico",
+        "type": "normal",
+        "power": 40
+    },
+    {
+        "name": "puño mareo",
+        "class": "fisico",
+        "type": "normal",
+        "power": 70,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "recuperacion",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "reduccion",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "remolino",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "restriccion",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "rizo defensa",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    }, 
+    {
+        "name": "rugido",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "salpicadura",
+        "class": "fisico",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "saña",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "superdiente",
+        "class": "fisico",
+        "type": "normal",
+        "power": 40
+    },
+    {
+        "name": "supersonico",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -1,
+            "probability": 55
+          }
+        ]
+    },
+    {
+        "name": "sustituto",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "transformacion",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },     
+    {
+        "name": "triataque",
+        "class": "fisico",
+        "type": "normal",
+        "power": 80
+    },
+    {
+        "name": "venganza",
+        "class": "fisico",
+        "type": "normal",
+        "power": 60,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "power",
+            "points": 20
+          }
+        ]
+    },
+    {
+        "name": "viento cortante",
+        "class": "especial",
+        "type": "normal",
+        "power": 60
+    },
+    {
+        "name": "ariete",
+        "class": "fisico",
+        "type": "normal",
+        "power": 40,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": 1
+          }
+        ]
+    },
+    {
+        "name": "avivar",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1
+          }
+        ]
+    },
+    {
+        "name": "canon",
+        "class": "fisico",
+        "type": "normal",
+        "power": 80
+    },          
+    {
+        "name": "canto arcaico",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "accuracy",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "cede paso",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1
+          }
+        ]
+    },
+    {
+        "name": "clonatipo",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "danza amiga",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1
+          }
+        ]
+    },
+    {
+        "name": "eco voz",
+        "class": "especial",
+        "type": "normal",
+        "power": 40
+    },
+    {
+        "name": "guardia baja",
+        "class": "estado",
+        "type": "normal",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": -1
+          }
+        ]
+    },
+    {
+        "name": "ofrenda",
+        "class": "estado",
+        "type": "normal",
+        "power": 0
+    },
+    {
+        "name": "onda simple",
+        "class": "especial",
+        "type": "normal",
+        "power": 60
+    },    
+    {
+        "name": "plumerazo",
+        "class": "fisico",
+        "type": "normal",
+        "power": 100
+    },
+    {
+        "name": "represalia",
+        "class": "fisico",
+        "type": "normal",
+        "power": 50,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": 2
+          }
+        ]
+    },
+    {
+        "name": "rompecoraza",
+        "class": "fisico",
+        "type": "normal",
+        "power": 120,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "defense",
+            "points": -1
+          }
+        ]
+    },
+    {
+        "name": "tecno shock",
+        "class": "especial",
+        "type": "normal",
+        "power": 80
+    },   
+    {
+        "name": "aguante",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "atraccion",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "autosugestion",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1
+          }
+        ]
+    },
+    {
+        "name": "azote",
+        "class": "fisico",
+        "type": "normal",
+        "power": 30
+    },
+    {
+        "name": "batido",
+        "class": "fisico",
+        "type": "normal",
+        "power": 70
+    },
+    {
+        "name": "canto mortal",
+        "class": "especial",
+        "type": "normal",
+        "power": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "hp",
+            "points": -1
+          }
+        ]
+    }, 
+    {
+        "name": "cara susto",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "cascabel cura",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "contoneo",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "conversion2",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "divide dolor",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "dulce aroma",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },   
+    {
+        "name": "esquema",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "falso tortazo",
+        "class": "fisico",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "fijar blanco",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "frustracion",
+        "class": "fisico",
+        "type": "normal"
+    },
+    {
+        "name": "giro rapido",
+        "class": "fisico",
+        "type": "normal"
+    },
+    {
+        "name": "mal de ojo",
+        "class": "estado",
+        "type": "normal"
+    },     
+    {
+        "name": "poder oculto",
+        "class": "especial",
+        "type": "normal",
+        "power": 60
+    },
+    {
+        "name": "presente",
+        "class": "estado",
+        "type": "normal",
+        "power": 40
+    },
+    {
+        "name": "profecia",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "proteccion",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "relevo",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "retribucion",
+        "class": "fisico",
+        "type": "normal",
+        "power": 50
+    }, 
+    {
+        "name": "ronquido",
+        "class": "estado",
+        "type": "normal",
+        "power": 50
+    },
+    {
+        "name": "velocidad extrema",
+        "class": "estado",
+        "type": "normal",
+        "power": 80
+    }, 
+    {
+        "name": "sol matinal",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "sonámbulo",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "tambor",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "telepata",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "velo sagrado",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "adaptacion",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "alboroto",
+        "class": "estado",
+        "type": "normal",
+        "power": 90,
+        "generation": 4
+    },
+    {
+        "name": "alivio",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "antojo",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "aullido",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "defense",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "ayuda",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spattack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "bloqueo",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "evasion",
+            "points": 10,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "bostezo",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "camuflaje",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "evasion",
+            "points": 10,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "cosquillas",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "danza caos",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "daño secreto",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "deseo",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1
+          }
+        ]
+    },  
+    {
+        "name": "escupir",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spdefense",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "esfuerzo",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "estimulo",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "garra brutal",
+        "class": "fisico",
+        "type": "normal",
+        "power": 100,
+        "precision": 80
+    },
+    {
+        "name": "imagen",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "meteorobola",
+        "class": "especial",
+        "type": "normal",
+        "power": 100,
+        "precision": 90
+    },
+    {
+        "name": "rastreo",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "evasion",
+            "points": -10,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "reciclaje",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "refuerzo",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "relajo",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spdefense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "reserva",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "señuelo",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "sorpresa",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "tragar",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "vozarron",
+        "class": "especial",
+        "type": "normal",
+        "power": 100,
+        "precision": 85
+    },   
+    {
+        "name": "acupresion",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "agarron",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "amago",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "as oculto",
+        "class": "especial",
+        "type": "normal",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "conjuro",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spdefense",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "copion",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "doble golpe",
+        "class": "fisico",
+        "type": "normal",
+        "power": 30,
+        "hits": 2
+    },    
+    {
+        "name": "don natural",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spdefense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "estrujon",
+        "class": "fisico",
+        "type": "normal",
+        "power": 50,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "gigaimpacto",
+        "class": "fisico",
+        "type": "normal",
+        "power": 150,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "seduccion",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spattack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "sentencia",
+        "class": "especial",
+        "type": "normal",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "treparrocas",
+        "class": "fisico",
+        "type": "normal",
+        "power": 40,
+        "precision": 100
+    },
+    {
+        "name": "ultima baza",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "yo primero",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },   
+    {
+        "name": "camaraderia",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spdefense",
+            "points": 1,
+            "probability": 100
+          },
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "celebracion",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "clemencia",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "confidencia",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "estruendo",
+        "class": "especial",
+        "type": "normal",
+        "power": 100,
+        "precision": 75
+    },
+    {
+        "name": "manos juntas",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "paga extra",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spattack",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "rugido de guerra",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },  
+    {
+        "name": "aguzar",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "danza despertar",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "eevimpacto",
+        "class": "especial",
+        "type": "normal",
+        "power": 100,
+        "precision": 90
+    },
+    {
+        "name": "foco",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "accuracy",
+            "points": 10,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "multiataque",
+        "class": "fisico",
+        "type": "normal",
+        "power": 120,
+        "hits": 2
+    },
+    {
+        "name": "ojos llorosos",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -10,
+            "probability": 100
+          }
+        ]
+    },    
+    {
+        "name": "atiborramiento",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "cambiapoder",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          },
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "cambio de cancha",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "gigamonedas",
+        "class": "especial",
+        "type": "normal",
+        "power": 150,
+        "precision": 100
+    },
+    {
+        "name": "gigarrenclaje",
+        "class": "estado",
+        "type": "normal",
+        "power": 200
+    },
+    {
+        "name": "gigaternura",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "hora del te",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          },
+          {
+            "toUser": true,
+            "stat": "special",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },  
+    {
+        "name": "maxiataque",
+        "class": "fisico",
+        "type": "normal",
+        "power": 250,
+        "precision": 100
+    },
+    {
+        "name": "maxibarrera",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "pulso de campo",
+        "class": "especial",
+        "type": "normal",
+        "power": 100
+    },
+    {
+        "name": "autotomia",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "decalcomania",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spdefense",
+            "points": 1
+          }
+        ]
+    },
+    {
+        "name": "deslome",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "furia taurina",
+        "class": "fisico",
+        "type": "normal",
+        "power": 90,
+        "precision": 100
+    },    
+    {
+        "name": "hipertaladro",
+        "class": "fisico",
+        "type": "normal",
+        "power": 100
+      },
+    {
+        "name": "limpieza general",
+        "class": "estado",
+        "type": "normal"
+    },
+    {
+        "name": "luna roja",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spdefense",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "plegaria vital",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "proliferacion",
+        "class": "estado",
+        "type": "normal",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          },
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "teracluster",
+        "class": "especial",
+        "type": "normal",
+        "power": 130,
+        "precision": 100
+    },
+    {
+        "name": "teraexplosion",
+        "class": "especial",
+        "type": "normal",
+        "power": 170,
+        "precision": 100
+    }                            
+]

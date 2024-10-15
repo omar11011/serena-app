@@ -1,0 +1,518 @@
+[
+    {
+        "name": "contraataque",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 50,
+        "precision": 100,
+        "priority": 1
+    },
+    {
+        "name": "doble patada",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 30,
+        "hits": 2
+    },
+    {
+        "name": "golpe karate",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 50,
+        "precision": 100
+    },
+    {
+        "name": "patada baja",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 60,
+        "precision": 100
+    },
+    {
+        "name": "patada giro",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 70,
+        "precision": 100
+    },
+    {
+        "name": "patada salto",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 100,
+        "precision": 95
+    },
+    {
+        "name": "patada salto alta",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 110,
+        "precision": 85
+    },
+    {
+        "name": "sismico",
+        "class": "especial",
+        "type": "lucha",
+        "power": 0
+    },
+    {
+        "name": "sumision",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 80,
+        "precision": 80,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "deteccion",
+        "class": "estado",
+        "type": "lucha"
+    },
+    {
+        "name": "golpe roca",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 75,
+        "precision": 90
+    },
+    {
+        "name": "inversion",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 20,
+        "precision": 100
+    },
+    {
+        "name": "llave vital",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 20,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": -50,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "puño dinamico",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 75,
+        "precision": 100
+    },
+    {
+        "name": "tajo cruzado",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 70,
+        "precision": 100
+    },
+    {
+        "name": "triple patada",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 20,
+        "hits": 3
+    },
+    {
+        "name": "ultrapuño",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 100,
+        "precision": 50
+    },  
+    {
+        "name": "corpulencia",
+        "class": "estado",
+        "type": "lucha",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          },
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "demolicion",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 120,
+        "precision": 100
+    },
+    {
+        "name": "desquite",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 50,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": -50,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "empujon",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 40,
+        "precision": 100
+    },
+    {
+        "name": "fuerza bruta",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 120,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": -50,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "gancho alto",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "puño certero",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 100,
+        "precision": 100
+    },
+    {
+        "name": "a bocajarro",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "esfera aural",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 80,
+        "precision": 100
+    },  
+    {
+        "name": "espabila",
+        "class": "estado",
+        "type": "lucha",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "machada",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 100,
+        "precision": 85
+    },
+    {
+        "name": "onda certera",
+        "class": "especial",
+        "type": "lucha",
+        "power": 60,
+        "precision": 100
+    },
+    {
+        "name": "onda vacio",
+        "class": "especial",
+        "type": "lucha",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "palmeo",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 30,
+        "precision": 100
+    },
+    {
+        "name": "puño drenaje",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 75,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 50,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "anticipo",
+        "class": "estado",
+        "type": "lucha"
+    },
+    {
+        "name": "espada santa",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 100,
+        "precision": 100
+    },
+    {
+        "name": "llave corse",
+        "class": "estado",
+        "type": "lucha",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "llave giro",
+        "class": "estado",
+        "type": "lucha",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "defense",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "puntapie",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 60,
+        "precision": 100
+    },
+    {
+        "name": "sable mistico",
+        "class": "especial",
+        "type": "lucha",
+        "power": 70,
+        "precision": 90,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spattack",
+            "points": 1,
+            "probability": 30
+          }
+        ]
+    },
+    {
+        "name": "sacrificio",
+        "class": "estado",
+        "type": "lucha",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": -50,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "escudo tatami",
+        "class": "estado",
+        "type": "lucha",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "plancha voladora",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 90,
+        "precision": 85
+    },
+    {
+        "name": "puño incremento",
+        "class": "estado",
+        "type": "lucha",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },    
+    {
+        "name": "asalto estela",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 100,
+        "precision": 90
+    },
+    {
+        "name": "bastion final",
+        "class": "estado",
+        "type": "lucha",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 2,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "danza triunfal",
+        "class": "estado",
+        "type": "lucha",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          },
+          {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "gigapunicion",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 120,
+        "precision": 85
+    },
+    {
+        "name": "maxipuno",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 150,
+        "precision": 80
+    },
+    {
+        "name": "motivacion",
+        "class": "estado",
+        "type": "lucha",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          },
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "octopresa",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 90,
+        "precision": 95
+    },
+    {
+        "name": "patada relampago",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 75,
+        "precision": 100,
+        "priority": 1
+    },
+    {
+        "name": "plancha corporal",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 80,
+        "precision": 95
+    },
+    {
+        "name": "triple flecha",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 60,
+        "hits": 3,
+        "precision": 85
+    },    
+    {
+        "name": "nitrochoque",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 100,
+        "precision": 90
+    },
+    {
+        "name": "palma rauda",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 70,
+        "precision": 100
+    },
+    {
+        "name": "patada hacha",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 85,
+        "precision": 95
+    },
+    {
+        "name": "pugnachoque",
+        "class": "fisico",
+        "type": "lucha",
+        "power": 120,
+        "precision": 80
+    }      
+]

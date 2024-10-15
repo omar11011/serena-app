@@ -1,0 +1,263 @@
+[
+    {
+        "name": "ataque arena",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 50
+    },
+    {
+        "name": "excavar",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 80
+    },
+    {
+        "name": "fisura",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -70,
+            "probability": 30
+          }
+        ]
+    },
+    {
+        "name": "hueso palo",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 70
+    },
+    {
+        "name": "huesomerang",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 50,
+        "hits": 2
+    },
+    {
+        "name": "terremoto",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -70,
+            "probability": 10
+          }
+        ]
+    }, 
+    {
+        "name": "ataque oseo",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 70
+    },
+    {
+        "name": "bofeton lodo",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 60
+    },
+    {
+        "name": "magnitud",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 60
+    },
+    {
+        "name": "puas",
+        "class": "estado",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "defense",
+            "points": -2,
+            "probability": 30
+          }
+        ]
+    },
+    {
+        "name": "bucle arena",
+        "class": "estado",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -10,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "chapoteo lodo",
+        "class": "fisico",
+        "type": "agua",
+        "power": 50
+    },
+    {
+        "name": "disparo lodo",
+        "class": "fisico",
+        "type": "agua",
+        "power": 70
+    },    
+    {
+        "name": "bomba fango",
+        "class": "especial",
+        "type": "agua",
+        "power": 80
+    },
+    {
+        "name": "tierra viva",
+        "class": "especial",
+        "type": "tierra",
+        "power": 95
+    },
+    {
+        "name": "taladradora",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 100
+    },
+    {
+        "name": "terratemblor",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 100
+    },
+    {
+        "name": "fertilizante",
+        "class": "estado",
+        "type": "tierra",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 40
+          }
+        ]
+    },
+    {
+        "name": "filo abismo",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 90
+    },
+    {
+        "name": "fuerza telurica",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 75
+    },
+    {
+        "name": "mil flechas",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 100,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 50
+            }
+        ]
+    },
+    {
+        "name": "mil temblores",
+        "class": "especial",
+        "type": "tierra",
+        "power": 90
+    },
+    {
+        "name": "fuerza equina",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 85
+    },
+    {
+        "name": "pataleta",
+        "class": "estado",
+        "type": "tierra",
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "attack",
+                "points": 2,
+                "probability": 70
+            },
+            {
+                "toUser": true,
+                "stat": "defense",
+                "points": 2,
+                "probability": 70
+            }
+        ]
+    },
+    {
+        "name": "recogearena",
+        "class": "estado",
+        "type": "tierra",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "evasion",
+            "points": 20,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "arenas ardientes",
+        "class": "especial",
+        "type": "tierra",
+        "power": 70
+    },
+    {
+        "name": "arremetida",
+        "class": "fisico",
+        "type": "tierra",
+        "power": 90
+    },
+    {
+        "name": "gigapolvareda",
+        "class": "especial",
+        "type": "tierra",
+        "power": 220,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -10,
+            "probability": 40
+          }
+        ]
+    },
+    {
+        "name": "maxitemblor",
+        "class": "especial",
+        "type": "tierra",
+        "power": 240
+    },
+    {
+        "name": "simun de arena",
+        "class": "especial",
+        "type": "tierra",
+        "power": 100,
+        "effects": [
+            {
+            "toUser": true,
+            "stat": "speed",
+            "points": 1,
+            "probability": 60
+            }
+        ]
+    }
+]

@@ -1,0 +1,387 @@
+[
+    {
+        "name": "ala de acero",
+        "class": "fisico",
+        "type": "acero",
+        "power": 70,
+        "precision": 90,
+        "generation": 2
+    },
+    {
+        "name": "cola ferrea",
+        "class": "fisico",
+        "type": "acero",
+        "power": 65,
+        "precision": 100,
+        "generation": 2
+    },
+    {
+        "name": "garra metal",
+        "class": "fisico",
+        "type": "acero",
+        "power": 50,
+        "precision": 100,
+        "generation": 2
+    },
+    {
+        "name": "defensa ferrea",
+        "class": "estado",
+        "type": "acero",
+        "generation": 2,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "defense",
+                "points": 1
+            }
+        ]
+    },
+    {
+        "name": "deseo oculto",
+        "class": "especial",
+        "type": "acero",
+        "power": 70,
+        "generation": 4,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "hp",
+                "points": 1,
+                "probability": 0.3
+            }
+        ]
+    },
+    {
+        "name": "eco metalico",
+        "class": "especial",
+        "type": "acero",
+        "power": 40,
+        "precision": 100,
+        "generation": 2
+    },   
+    {
+        "name": "eco metalico",
+        "class": "especial",
+        "type": "acero",
+        "power": 40,
+        "precision": 100,
+        "generation": 2
+    },        
+    {
+        "name": "bomba iman",
+        "class": "especial",
+        "type": "acero",
+        "power": 60,
+        "precision": 100,
+        "generation": 5
+    },    
+    {
+        "name": "cabeza de hierro",
+        "class": "fisico",
+        "type": "acero",
+        "power": 70,
+        "precision": 100,
+        "generation": 2,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "defense",
+                "points": -1,
+                "probability": 0.3
+            }
+        ]
+    },     
+    {
+        "name": "disparo espejo",
+        "class": "especial",
+        "type": "acero",
+        "power": 70,
+        "precision": 100,
+        "generation": 5
+    },            
+    {
+        "name": "foco resplandor",
+        "class": "especial",
+        "type": "acero",
+        "power": 80,
+        "precision": 100,
+        "generation": 5,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "spdefense",
+                "points": -1,
+                "probability": 0.2
+            }
+        ]
+    },       
+    {
+        "name": "giro bala",
+        "class": "fisico",
+        "type": "acero",
+        "power": 80,
+        "precision": 90,
+        "generation": 5,
+        "hits": 2
+    },      
+    {
+        "name": "puño bala",
+        "class": "fisico",
+        "type": "acero",
+        "power": 75,
+        "precision": 100,
+        "generation": 5
+    },   
+    {
+        "name": "represion metal",
+        "class": "especial",
+        "type": "acero",
+        "power": 50,
+        "precision": 100,
+        "generation": 5
+    },     
+    {
+        "name": "aligerar",
+        "class": "estado",
+        "type": "acero",
+        "generation": 5,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "speed",
+                "points": 1
+            }
+        ]
+    },          
+    {
+        "name": "cambio de marcha",
+        "class": "estado",
+        "type": "acero",
+        "generation": 5,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "speed",
+                "points": 1
+            }
+        ]
+    },      
+    {
+        "name": "cuerpo pesado",
+        "class": "fisico",
+        "type": "acero",
+        "power": 100,
+        "precision": 100,
+        "generation": 2,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 0.3
+            }
+        ]
+    },      
+    {
+        "name": "rueda doble",
+        "class": "fisico",
+        "type": "acero",
+        "power": 60,
+        "precision": 100,
+        "generation": 5,
+        "hits": 2
+    },      
+    {
+        "name": "escudo real",
+        "class": "estado",
+        "type": "acero",
+        "generation": 8,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "defense",
+                "points": 1
+            },
+            {
+                "toUser": true,
+                "stat": "spdefense",
+                "points": 1
+            }
+        ]
+    },    
+    {
+        "name": "anclaje",
+        "class": "estado",
+        "type": "acero",
+        "generation": 5,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "defense",
+                "points": 1
+            },
+            {
+                "toUser": true,
+                "stat": "spdefense",
+                "points": 1
+            }
+        ]
+    },    
+    {
+        "name": "cuerno certero",
+        "class": "fisico",
+        "type": "acero",
+        "power": 120,
+        "precision": 100,
+        "generation": 8,
+        "zMove": {
+          "power": 190,
+          "item": "metalostal z"
+        }
+    },    
+    {
+        "name": "ferropuño doble",
+        "class": "fisico",
+        "type": "acero",
+        "power": 100,
+        "precision": 100,
+        "generation": 8,
+        "hits": 2
+    },  
+    {
+        "name": "meteorimpacto",
+        "class": "fisico",
+        "type": "acero",
+        "power": 100,
+        "precision": 100,
+        "generation": 7
+    },     
+    {
+        "name": "pinon auxiliar",
+        "class": "estado",
+        "type": "acero",
+        "generation": 8,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "speed",
+                "points": 2,
+                "probability": 1
+            }
+        ]
+    },       
+    {
+        "name": "allanador ferro",
+        "class": "fisico",
+        "type": "acero",
+        "power": 75,
+        "precision": 100,
+        "generation": 8
+    },
+    {
+        "name": "embate supremo",
+        "class": "fisico",
+        "type": "acero",
+        "power": 100,
+        "precision": 100,
+        "generation": 8
+    },
+    {
+        "name": "gigafundido",
+        "class": "especial",
+        "type": "acero",
+        "power": 150,
+        "generation": 8
+    },   
+    {
+        "name": "gigatrampa acero",
+        "class": "fisico",
+        "type": "acero",
+        "power": 160,
+        "generation": 8
+    },           
+    {
+        "name": "maximetal",
+        "class": "fisico",
+        "type": "acero",
+        "power": 130,
+        "generation": 8
+    },
+    {
+        "name": "metalaser",
+        "class": "especial",
+        "type": "acero",
+        "power": 120,
+        "precision": 100,
+        "generation": 7,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "spattack",
+                "points": -2
+            }
+        ]
+    },    
+    {
+        "name": "retraccion",
+        "class": "fisico",
+        "type": "acero",
+        "power": 40,
+        "generation": 8
+    },       
+    {
+        "name": "tajo supremo",
+        "class": "fisico",
+        "type": "acero",
+        "power": 100,
+        "precision": 50,
+        "generation": 8
+    },
+    {
+        "name": "fiebre dorada",
+        "class": "especial",
+        "type": "acero",
+        "power": 80,
+        "generation": 8
+    },
+    {
+        "name": "martillo colosal",
+        "class": "fisico",
+        "type": "acero",
+        "power": 130,
+        "precision": 100,
+        "generation": 8
+    },
+    {
+        "name": "prensa metalica",
+        "class": "fisico",
+        "type": "acero",
+        "power": 100,
+        "precision": 100,
+        "generation": 8,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "defense",
+                "points": -1,
+                "probability": 0.5
+            }
+        ]
+    },     
+    {
+        "name": "quemarrueda",
+        "class": "fisico",
+        "type": "acero",
+        "power": 60,
+        "precision": 100,
+        "generation": 8
+    },     
+    {
+        "name": "tajo taquion",
+        "class": "fisico",
+        "type": "acero",
+        "power": 80,
+        "precision": 100,
+        "generation": 8
+    }                                           
+]

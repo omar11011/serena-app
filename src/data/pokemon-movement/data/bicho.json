@@ -1,0 +1,296 @@
+[
+    {
+        "name": "chupavidas",
+        "class": "especial",
+        "type": "bicho",
+        "power": 20,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "hp",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    },     
+    {
+        "name": "disparo demora",
+        "class": "especial",
+        "type": "bicho",
+        "power": 60
+    },    
+    {
+        "name": "doble ataque",
+        "class": "fisico",
+        "type": "bicho",
+        "power": 30,
+        "hits": 2
+    },       
+    {
+        "name": "pin misil",
+        "class": "fisico",
+        "type": "bicho",
+        "power": 25,
+        "hits": 5
+    },
+    {
+        "name": "corte furia",
+        "class": "fisico",
+        "type": "bicho",
+        "power": 15,
+        "hits": 2
+    },      
+    {
+        "name": "megacuerno",
+        "class": "fisico",
+        "type": "bicho",
+        "power": 130
+    },      
+    {
+        "name": "telarana",
+        "class": "estado",
+        "type": "bicho",
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },
+    {
+        "name": "luminicola",
+        "class": "especial",
+        "type": "bicho",
+        "power": 70
+    },      
+    {
+        "name": "rayo señal",
+        "class": "especial",
+        "type": "bicho",
+        "power": 120
+    },      
+    {
+        "name": "viento plata",
+        "class": "especial",
+        "type": "bicho",
+        "power": 60,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "speed",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "a defender",
+        "class": "estado",
+        "type": "bicho",
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "defense",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "al ataque",
+        "class": "estado",
+        "type": "bicho",
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "attack",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "auxilio",
+        "class": "estado",
+        "type": "bicho"
+    },      
+    {
+        "name": "ida y vuelta",
+        "class": "físico",
+        "type": "bicho",
+        "power": 70,
+        "hits": 2
+    }, 
+    {
+        "name": "picadura",
+        "class": "físico",
+        "type": "bicho",
+        "power": 40
+    },      
+    {
+        "name": "tijera x",
+        "class": "físico",
+        "type": "bicho",
+        "power": 80,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "defense",
+                "points": -1,
+                "probability": 50
+            }
+        ]
+    },     
+    {
+        "name": "zumbido",
+        "class": "especial",
+        "type": "bicho",
+        "power": 90
+    },      
+    {
+        "name": "danza aleteo",
+        "class": "estado",
+        "type": "bicho",
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "speed",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    },  
+    {
+        "name": "estoicismo",
+        "class": "estado",
+        "type": "bicho"
+    },      
+    {
+        "name": "polvo ira",
+        "class": "estado",
+        "type": "bicho"
+    },      
+    {
+        "name": "rodillo de pugas",
+        "class": "físico",
+        "type": "bicho",
+        "power": 30,
+        "hits": 2
+    },      
+    {
+        "name": "acoso",
+        "class": "estado",
+        "type": "bicho",
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },     
+    {
+        "name": "aguijon letal",
+        "class": "físico",
+        "type": "bicho",
+        "power": 40,
+        "precision": 100
+    },  
+    {
+        "name": "polvo explosivo",
+        "class": "especial",
+        "type": "bicho",
+        "power": 60
+    },      
+    {
+        "name": "red viscosa",
+        "class": "estado",
+        "type": "bicho",
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "bola de polen",
+        "class": "especial",
+        "type": "bicho",
+        "power": 90,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "spdefense",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },  
+    {
+        "name": "escaramuza",
+        "class": "físico",
+        "type": "bicho",
+        "power": 25,
+        "precision": 100,
+        "hits": 2
+    },      
+    {
+        "name": "plancha",
+        "class": "físico",
+        "type": "bicho",
+        "power": 60
+    },      
+    {
+        "name": "gigaestupor",
+        "class": "especial",
+        "type": "bicho",
+        "power": 200
+    },      
+    {
+        "name": "golpe rastrero",
+        "class": "físico",
+        "type": "bicho",
+        "power": 50,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },    
+    {
+        "name": "maxinsecto",
+        "class": "especial",
+        "type": "bicho",
+        "power": 150
+    },      
+    {
+        "name": "brinco",
+        "class": "físico",
+        "type": "bicho",
+        "power": 30,
+        "precision": 100,
+        "hits": 2
+    },      
+    {
+        "name": "telatrampa",
+        "class": "estado",
+        "type": "bicho",
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    }      
+]

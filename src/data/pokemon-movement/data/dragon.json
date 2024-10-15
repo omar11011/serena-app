@@ -1,0 +1,295 @@
+[
+    {
+        "name": "furia dragon",
+        "class": "físico",
+        "type": "dragon",
+        "power": 120,
+        "hits": 2
+    },      
+    {
+        "name": "ciclon",
+        "class": "especial",
+        "type": "dragon",
+        "power": 60,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "dragoaliento",
+        "class": "especial",
+        "type": "dragon",
+        "power": 90
+    },      
+    {
+        "name": "enfado",
+        "class": "físico",
+        "type": "dragon",
+        "power": 120,
+        "hits": 2
+    },      
+    {
+        "name": "danza dragon",
+        "class": "estado",
+        "type": "dragon",
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "attack",
+                "points": 1,
+                "probability": 100
+            },
+            {
+                "toUser": true,
+                "stat": "speed",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "garra dragon",
+        "class": "físico",
+        "type": "dragon",
+        "power": 75
+    },      
+    {
+        "name": "carga dragon",
+        "class": "físico",
+        "type": "dragon",
+        "power": 60,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 50
+            }
+        ]
+    },      
+    {
+        "name": "cometa draco",
+        "class": "especial",
+        "type": "dragon",
+        "power": 130,
+        "hits": 2
+    },      
+    {
+        "name": "corte vacio",
+        "class": "físico",
+        "type": "dragon",
+        "power": 60,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "spdefense",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },    
+    {
+        "name": "distorsion",
+        "class": "estado",
+        "type": "dragon",
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "speed",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    },        
+    {
+        "name": "pulso dragon",
+        "class": "especial",
+        "type": "dragon",
+        "power": 85
+    },      
+    {
+        "name": "cola dragon",
+        "class": "físico",
+        "type": "dragon",
+        "power": 90,
+        "hits": 2
+    },      
+    {
+        "name": "golpe bis",
+        "class": "físico",
+        "type": "dragon",
+        "power": 70,
+        "hits": 2
+    },  
+    {
+        "name": "estruendo implacable",
+        "class": "especial",
+        "type": "dragon",
+        "power": 140,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "attack",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "fragor escamas",
+        "class": "especial",
+        "type": "dragon",
+        "power": 90
+    },      
+    {
+        "name": "martillo dragon",
+        "class": "físico",
+        "type": "dragon",
+        "power": 130
+    },      
+    {
+        "name": "nucleo castigo",
+        "class": "especial",
+        "type": "dragon",
+        "power": 100,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "spdefense",
+                "points": -1,
+                "probability": 50
+            }
+        ]
+    },      
+    {
+        "name": "canon dinamax",
+        "class": "especial",
+        "type": "dragon",
+        "power": 200
+    },      
+    {
+        "name": "dragoenergia",
+        "class": "especial",
+        "type": "dragon",
+        "power": 75,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "hp",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "dracoflechas",
+        "class": "físico",
+        "type": "dragon",
+        "power": 90
+    },      
+    {
+        "name": "estruendo escama",
+        "class": "especial",
+        "type": "dragon",
+        "power": 150,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "attack",
+                "points": -1,
+                "probability": 30
+            }
+        ]
+    },      
+    {
+        "name": "gigadesgaste",
+        "class": "especial",
+        "type": "dragon",
+        "power": 130
+    },      
+    {
+        "name": "maxidraco",
+        "class": "especial",
+        "type": "dragon",
+        "power": 250
+    },      
+    {
+        "name": "rafaga escamas",
+        "class": "especial",
+        "type": "dragon",
+        "power": 75,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "speed",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "rayo infinito",
+        "class": "especial",
+        "type": "dragon",
+        "power": 110
+    },      
+    {
+        "name": "vasto impacto",
+        "class": "físico",
+        "type": "dragon",
+        "power": 150
+    },      
+    {
+        "name": "asalto espadon",
+        "class": "físico",
+        "type": "dragon",
+        "power": 130,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "defense",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "bramido dragon",
+        "class": "especial",
+        "type": "dragon",
+        "power": 60
+    },      
+    {
+        "name": "laser veleidoso",
+        "class": "especial",
+        "type": "dragon",
+        "power": 80,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "spdefense",
+                "points": -2,
+                "probability": 30
+            }
+        ]
+    },      
+    {
+        "name": "oido cocina",
+        "class": "especial",
+        "type": "dragon",
+        "power": 100,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "hp",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    }      
+]

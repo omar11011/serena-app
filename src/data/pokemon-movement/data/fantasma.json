@@ -1,0 +1,324 @@
+[
+    {
+        "name": "lenguetazo",
+        "class": "fisico",
+        "type": "fantasma",
+        "power": 30
+    },      
+    {
+        "name": "rayo confuso",
+        "class": "especial",
+        "type": "fantasma",
+        "power": 50,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 0.3
+            }
+        ]
+    },      
+    {
+        "name": "tinieblas",
+        "class": "especial",
+        "type": "fantasma",
+        "power": 80
+    },      
+    {
+        "name": "bola sombra",
+        "class": "especial",
+        "type": "fantasma",
+        "power": 80,
+        "precision": 100
+    },      
+    {
+        "name": "maldicion",
+        "class": "estado",
+        "type": "fantasma",
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "hp",
+                "points": -1,
+                "probability": ""
+            },
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": ""
+            }
+        ]
+    },     
+    {
+        "name": "mismo destino",
+        "class": "estado",
+        "type": "fantasma",
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "hp",
+                "points": -1,
+                "probability": ""
+            }
+        ]
+    },      
+    {
+        "name": "pesadilla",
+        "class": "estado",
+        "type": "fantasma",
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": ""
+            }
+        ]
+    },      
+    {
+        "name": "rencor",
+        "class": "especial",
+        "type": "fantasma",
+        "power": 0
+    },      
+    {
+        "name": "impresionar",
+        "class": "estado",
+        "type": "fantasma",
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "spdefense",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "punho sombra",
+        "class": "fisico",
+        "type": "fantasma",
+        "power": 75,
+        "precision": 100
+    },     
+    {
+        "name": "rabia",
+        "class": "fisico",
+        "type": "fantasma",
+        "power": 20,
+        "hits": 2
+    },       
+    {
+        "name": "golpe fantasma",
+        "class": "fisico",
+        "type": "fantasma",
+        "power": 70,
+        "precision": 100
+    },      
+    {
+        "name": "halloween",
+        "class": "estado",
+        "type": "fantasma",
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "infortunio",
+        "class": "estado",
+        "type": "fantasma",
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "garra umbria",
+        "class": "fisico",
+        "type": "fantasma",
+        "power": 65,
+        "precision": 100,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": 1,
+                "probability": 30
+            }
+        ]
+    },
+    {
+        "name": "golpe umbrio",
+        "class": "fisico",
+        "type": "fantasma",
+        "power": 90,
+        "precision": 100
+    },     
+    {
+        "name": "sombra vil",
+        "class": "especial",
+        "type": "fantasma",
+        "power": 60,
+        "precision": 100
+    },             
+    {
+        "name": "viento aciago",
+        "class": "estado",
+        "type": "fantasma",
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 100
+            }
+        ]
+    },   
+    {
+        "name": "gigaaparicion",
+        "class": "especial",
+        "type": "fantasma",
+        "power": 200
+    },         
+    {
+        "name": "marcha espectral",
+        "class": "estado",
+        "type": "fantasma",
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "hp",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "maxiespectro",
+        "class": "especial",
+        "type": "fantasma",
+        "power": 200
+    },      
+    {
+        "name": "orbes espectro",
+        "class": "especial",
+        "type": "fantasma",
+        "power": 80,
+        "precision": 100,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": 30
+            }
+        ]
+    },   
+    {
+        "name": "poltergeist",
+        "class": "especial",
+        "type": "fantasma",
+        "power": 110,
+        "precision": 100,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": 40
+            }
+        ]
+    },
+    {
+        "name": "rencor reprimido",
+        "class": "especial",
+        "type": "fantasma",
+        "power": 70,
+        "precision": 100
+    },            
+    {
+        "name": "hueso sombria",
+        "class": "fisico",
+        "type": "fantasma",
+        "power": 50,
+        "precision": 100,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "hp",
+                "points": -1,
+                "probability": 30
+            }
+        ]
+    },         
+    {
+        "name": "puntada sombria",
+        "class": "fisico",
+        "type": "fantasma",
+        "power": 70,
+        "precision": 100,
+        "effects": [
+            {
+                "toUser": false,
+                "stat": "speed",
+                "points": -1,
+                "probability": 50
+            }
+        ]
+    },     
+    {
+        "name": "rayo umbrio",
+        "class": "especial",
+        "type": "fantasma",
+        "power": 100,
+        "precision": 100
+    },      
+    {
+        "name": "robasombra",
+        "class": "fisico",
+        "type": "fantasma",
+        "power": 80,
+        "precision": 100,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "hp",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    },      
+    {
+        "name": "homenaje postumo",
+        "class": "fisico",
+        "type": "fantasma",
+        "power": 50,
+        "precision": 100,
+        "effects": [
+            {
+                "toUser": true,
+                "stat": "hp",
+                "points": 1,
+                "probability": 100
+            }
+        ]
+    },     
+    {
+        "name": "puño furia",
+        "class": "fisico",
+        "type": "fantasma",
+        "power": 60,
+        "precision": 100
+    }
+]

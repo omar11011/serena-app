@@ -1,0 +1,342 @@
+[
+    {
+        "name": "acido",
+        "class": "especial",
+        "type": "veneno",
+        "power": 40
+    },
+    {
+        "name": "armadura acida",
+        "class": "estado",
+        "type": "veneno",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "gas venenoso",
+        "class": "especial",
+        "type": "veneno",
+        "power": 65
+    },
+    {
+        "name": "picotazo veneno",
+        "class": "fisico",
+        "type": "veneno",
+        "power": 50
+    },
+    {
+        "name": "polucion",
+        "class": "especial",
+        "type": "veneno",
+        "power": 70
+    },
+    {
+        "name": "polvo veneno",
+        "class": "estado",
+        "type": "veneno",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -20,
+            "probability": 60
+          }
+        ]
+    },
+    {
+        "name": "residuos",
+        "class": "estado",
+        "type": "veneno",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 20
+          }
+        ]
+    },
+    {
+        "name": "toxico",
+        "class": "especial",
+        "type": "veneno",
+        "power": 90
+    },
+    {
+        "name": "bomba lodo",
+        "class": "especial",
+        "type": "veneno",
+        "power": 70
+    },
+    {
+        "name": "cola veneno",
+        "class": "fisico",
+        "type": "veneno",
+        "power": 65
+    },
+    {
+        "name": "colmillo veneno",
+        "class": "fisico",
+        "type": "veneno",
+        "power": 50
+    },
+    {
+        "name": "bilis",
+        "class": "estado",
+        "type": "veneno",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spdefense",
+            "points": -1
+          }
+        ]
+    },
+    {
+        "name": "lanzamugre",
+        "class": "especial",
+        "type": "veneno",
+        "power": 55
+    },
+    {
+        "name": "puas toxicas",
+        "class": "estado",
+        "type": "veneno",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "defense",
+            "points": -1
+          }
+        ]
+    },
+    {
+        "name": "puya nociva",
+        "class": "fisico",
+        "type": "veneno",
+        "power": 40
+    },
+    {
+        "name": "veneno x",
+        "class": "especial",
+        "type": "veneno",
+        "power": 80,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spdefense",
+            "points": -2,
+            "probability": 90
+          },
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -2,
+            "probability": 90
+          }
+        ]
+    },
+    {
+        "name": "bomba acida",
+        "class": "especial",
+        "type": "veneno",
+        "power": 70
+    },
+    {
+        "name": "carga toxica",
+        "class": "estado",
+        "type": "veneno",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "defense",
+            "points": -2,
+            "probability": 70
+          }
+        ]
+    },
+    {
+        "name": "enrosque",
+        "class": "estado",
+        "type": "veneno",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -2,
+            "probability": 90
+          }
+        ]
+    },
+    {
+        "name": "niebla clara",
+        "class": "estado",
+        "type": "veneno",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -20
+          }
+        ]
+    },
+    {
+        "name": "onda toxica",
+        "class": "especial",
+        "type": "veneno",
+        "power": 60
+    },
+    {
+        "name": "eructo",
+        "class": "especial",
+        "type": "veneno",
+        "power": 50
+    },
+    {
+        "name": "trampa venenosa",
+        "class": "estado",
+        "type": "veneno",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -3,
+            "probability": 60
+          }
+        ]
+    },
+    {
+        "name": "bunker",
+        "class": "estado",
+        "type": "veneno",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 2,
+            "probability": 70
+          }
+        ]
+    },
+    {
+        "name": "hilo venenoso",
+        "class": "especial",
+        "type": "veneno",
+        "power": 70
+    },
+    {
+        "name": "purificacion",
+        "class": "estado",
+        "type": "veneno",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 90
+          }
+        ]
+    },
+    {
+        "name": "garra nociva",
+        "class": "fisico",
+        "type": "veneno",
+        "power": 60
+      },
+    {
+        "name": "gas corrosivo",
+        "class": "especial",
+        "type": "veneno",
+        "power": 80,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1
+          }
+        ]
+    },
+    {
+        "name": "gigapestilencia",
+        "class": "especial",
+        "type": "veneno",
+        "power": 240,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spdefense",
+            "points": -1
+          }
+        ]
+    },
+    {
+        "name": "maxiacido",
+        "class": "especial",
+        "type": "veneno",
+        "power": 250
+    },
+    {
+        "name": "mil puas toxicas",
+        "class": "fisico",
+        "type": "veneno",
+        "power": 75
+    },
+    {
+        "name": "moluscañon",
+        "class": "especial",
+        "type": "veneno",
+        "power": 90,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -3,
+            "probability": 40
+          }
+        ]
+    },
+    {
+        "name": "cadena virulenta",
+        "class": "estado",
+        "type": "veneno",
+        "power": 0,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "giro mortifero",
+        "class": "fisico",
+        "type": "veneno",
+        "power": 90
+    },
+    {
+        "name": "ponzochoque",
+        "class": "especial",
+        "type": "veneno",
+        "power": 75,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "accuracy",
+            "points": -50,
+            "probability": 60
+          }
+        ]
+    }
+]

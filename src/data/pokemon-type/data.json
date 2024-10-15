@@ -1,0 +1,135 @@
+[
+    {
+        "name": "acero",
+        "effectiveness": {
+            "superEffective": ["hada", "hielo", "roca"],
+            "ineffective": ["acero", "agua", "electrico", "fuego"]
+        }
+    },
+    {
+        "name": "agua",
+        "effectiveness": {
+            "superEffective": ["fuego", "roca", "tierra"],
+            "ineffective": ["agua", "dragon", "planta"]
+        }
+    },
+    {
+        "name": "bicho",
+        "effectiveness": {
+            "superEffective": ["planta", "psiquico", "siniestro"],
+            "ineffective": ["acero", "fantasma", "fuego", "hada", "lucha", "veneno", "volador"]
+        }
+    },
+    {
+        "name": "dragon",
+        "effectiveness": {
+            "superEffective": ["dragon"],
+            "ineffective": ["acero"],
+            "doesNotAffect": ["hada"]
+        }
+    },
+    {
+        "name": "electrico",
+        "effectiveness": {
+            "superEffective": ["agua", "volador"],
+            "ineffective": ["dragon", "electrico", "planta"],
+            "doesNotAffect": ["tierra"]
+        }
+    },
+    {
+        "name": "fantasma",
+        "effectiveness": {
+            "superEffective": ["fantasma", "psiquico"],
+            "ineffective": ["siniestro"],
+            "doesNotAffect": ["normal"]
+        }
+    },
+    {
+        "name": "fuego",
+        "effectiveness": {
+            "superEffective": ["acero", "bicho", "hielo", "planta"],
+            "ineffective": ["agua", "dragon", "fuego", "roca"]
+        }
+    },
+    {
+        "name": "hada",
+        "effectiveness": {
+            "superEffective": ["dragon", "lucha", "siniestro"],
+            "ineffective": ["acero", "fuego", "veneno"]
+        }
+    },
+    {
+        "name": "hielo",
+        "effectiveness": {
+            "superEffective": ["dragon", "planta", "tierra", "volador"],
+            "ineffective": ["acero", "agua", "fuego", "hielo"]
+        }
+    },
+    {
+        "name": "lucha",
+        "effectiveness": {
+            "superEffective": ["acero", "hielo", "normal", "roca", "siniestro"],
+            "ineffective": ["bicho", "hada", "psiquico", "veneno", "volador"],
+            "doesNotAffect": ["fantasma"]
+        }
+    },
+    {
+        "name": "normal",
+        "effectiveness": {
+            "ineffective": ["acero", "roca"],
+            "doesNotAffect": ["fantasma"]
+        }
+    },
+    {
+        "name": "planta",
+        "effectiveness": {
+            "superEffective": ["agua", "roca", "tierra"],
+            "ineffective": ["acero", "bicho", "dragon", "fuego", "planta", "veneno", "volador"]
+        }
+    },
+    {
+        "name": "psiquico",
+        "effectiveness": {
+            "superEffective": ["lucha", "veneno"],
+            "ineffective": ["acero", "psiquico"],
+            "doesNotAffect": ["siniestro"]
+        }
+    },
+    {
+        "name": "roca",
+        "effectiveness": {
+            "superEffective": ["bicho", "fuego", "hielo", "volador"],
+            "ineffective": ["acero", "lucha", "siniestro"]
+        }
+    },
+    {
+        "name": "siniestro",
+        "effectiveness": {
+            "superEffective": ["fantasma", "psiquico"],
+            "ineffective": ["hada", "lucha", "siniestro"]
+        }
+    },
+    {
+        "name": "tierra",
+        "effectiveness": {
+            "superEffective": ["acero", "electrico", "fuego", "roca", "veneno"],
+            "ineffective": ["bicho", "planta"],
+            "doesNotAffect": ["volador"]
+        }
+    },
+    {
+        "name": "veneno",
+        "effectiveness": {
+            "superEffective": ["hada", "planta"],
+            "ineffective": ["fantasma", "roca", "tierra", "veneno"],
+            "doesNotAffect": ["acero"]
+        }
+    },
+    {
+        "name": "volador",
+        "effectiveness": {
+            "superEffective": ["bicho", "lucha", "planta"],
+            "ineffective": ["acero", "electrico", "roca"]
+        }
+    }
+]

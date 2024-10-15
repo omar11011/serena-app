@@ -1,0 +1,38 @@
+[
+    {
+        "name": "pradera",
+        "description": "Se encuentran en la hierba alta de las rutas."
+    },
+    {
+        "name": "bosque",
+        "description": "Son, en su mayoría, Pokémon de tipo bicho y planta. Viven en lugares un poco protegidos, por lo que suelen estar en lugares muy específicos, lo que no quiere decir que sean necesariamente raros."
+    },
+    {
+        "name": "agua dulce",
+        "description": "Son, en su mayoría, Pokémon de tipo agua que viven en lagos o ríos."
+    },
+    {
+        "name": "agua salada",
+        "description": "Son, en su mayoría, Pokémon de tipo agua que viven en la superficie del mar o en las profundidades."
+    },
+    {
+        "name": "caverna",
+        "description": "Habitan en cuevas, siempre aislados; necesitan de la oscuridad, y no son usualmente vistos en la hierba."
+    },
+    {
+        "name": "montaña",
+        "description": "Son vistos en las zonas rocosas y altas cumbres, así como en cuevas y superficies."
+    },
+    {
+        "name": "campo",
+        "description": "Son Pokémon que viven aislados de todo contacto humano en zonas inhóspitas, como desiertos; aunque suelen ser vistos en las zonas donde salen a comer o recargarse."
+    },
+    {
+        "name": "ciudad",
+        "description": "Son Pokémon domesticados o que viven en las ciudades, por lo que ninguno de ellos es legendario."
+    },
+    {
+        "name": "raro",
+        "description": "Todos los Pokémon son Pokémon legendarios (excepto Unown), por lo que son muy raramente vistos."
+    }
+]

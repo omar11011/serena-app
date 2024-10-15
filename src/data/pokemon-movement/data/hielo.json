@@ -1,0 +1,331 @@
+[
+    {
+        "name": "neblina",
+        "class": "estado",
+        "type": "hielo",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "niebla",
+        "class": "estado",
+        "type": "hielo",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spdefense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "puño hielo",
+        "class": "fisico",
+        "type": "hielo",
+        "power": 75,
+        "precision": 100
+    },
+    {
+        "name": "rayo aurora",
+        "class": "especial",
+        "type": "hielo",
+        "power": 90,
+        "precision": 100
+    },
+    {
+        "name": "rayo hielo",
+        "class": "especial",
+        "type": "hielo",
+        "power": 95,
+        "precision": 100
+    },
+    {
+        "name": "ventisca",
+        "class": "especial",
+        "type": "hielo",
+        "power": 110,
+        "precision": 70
+    },
+    {
+        "name": "nieve polvo",
+        "class": "especial",
+        "type": "hielo",
+        "power": 60,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "viento hielo",
+        "class": "especial",
+        "type": "hielo",
+        "power": 40,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },  
+    {
+        "name": "bola hielo",
+        "class": "especial",
+        "type": "hielo",
+        "power": 90,
+        "precision": 100
+    },
+    {
+        "name": "carambano",
+        "class": "fisico",
+        "type": "hielo",
+        "power": 50,
+        "precision": 100
+    },
+    {
+        "name": "frio polar",
+        "class": "especial",
+        "type": "hielo",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "granizo",
+        "class": "estado",
+        "type": "hielo",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "hp",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "alud",
+        "class": "fisico",
+        "type": "hielo",
+        "power": 100,
+        "precision": 75
+    },
+    {
+        "name": "colmillo hielo",
+        "class": "fisico",
+        "type": "hielo",
+        "power": 65,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 10
+          }
+        ]
+    },
+    {
+        "name": "esquirla helada",
+        "class": "especial",
+        "type": "hielo",
+        "power": 40,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    }, 
+    {
+        "name": "chuzos",
+        "class": "fisico",
+        "type": "hielo",
+        "power": 30,
+        "precision": 100
+    },
+    {
+        "name": "llama gelida",
+        "class": "especial",
+        "type": "hielo",
+        "power": 70,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spdefense",
+            "points": -1,
+            "probability": 10
+          }
+        ]
+    },
+    {
+        "name": "mundo gelido",
+        "class": "estado",
+        "type": "hielo",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "hp",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "rayo gelido",
+        "class": "especial",
+        "type": "hielo",
+        "power": 90,
+        "precision": 100
+    },
+    {
+        "name": "vaho gelido",
+        "class": "estado",
+        "type": "hielo",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "liofilizacion",
+        "class": "fisico",
+        "type": "hielo",
+        "power": 80,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },    
+    {
+        "name": "glaceoprisma",
+        "class": "especial",
+        "type": "hielo",
+        "power": 70,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 10
+          }
+        ]
+    },
+    {
+        "name": "martillo hielo",
+        "class": "fisico",
+        "type": "hielo",
+        "power": 100,
+        "precision": 90
+    },
+    {
+        "name": "velo aurora",
+        "class": "estado",
+        "type": "hielo",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "gigamelodia",
+        "class": "especial",
+        "type": "hielo",
+        "power": 160,
+        "precision": 100
+    },
+    {
+        "name": "lanza glacial",
+        "class": "especial",
+        "type": "hielo",
+        "power": 110,
+        "precision": 70
+    },
+    {
+        "name": "maxihelada",
+        "class": "especial",
+        "type": "hielo",
+        "power": 140,
+        "precision": 90
+    },
+    {
+        "name": "triple axel",
+        "class": "fisico",
+        "type": "hielo",
+        "power": 20,
+        "hits": 3,
+        "precision": 90
+    },
+    {
+        "name": "viento carambano",
+        "class": "especial",
+        "type": "hielo",
+        "power": 55,
+        "precision": 95
+    },      
+    {
+        "name": "fria acogida",
+        "class": "estado",
+        "type": "hielo",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "paisaje nevado",
+        "class": "estado",
+        "type": "hielo",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "pirueta helada",
+        "class": "fisico",
+        "type": "hielo",
+        "power": 50,
+        "precision": 100
+    }      
+]

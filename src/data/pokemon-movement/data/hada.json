@@ -1,0 +1,277 @@
+[
+    {
+        "name": "beso dulce",
+        "class": "estado",
+        "type": "hada"
+    },
+    {
+        "name": "encanto",
+        "class": "estado",
+        "type": "hada"
+    },
+    {
+        "name": "luz lunar",
+        "class": "estado",
+        "type": "hada"
+    },
+    {
+        "name": "beso drenaje",
+        "class": "especial",
+        "type": "hada",
+        "power": 50
+    },
+    {
+        "name": "brillo magico",
+        "class": "especial",
+        "type": "hada",
+        "power": 80
+    },
+    {
+        "name": "campo de niebla",
+        "class": "estado",
+        "type": "hada"
+    },    
+    {
+        "name": "carantoña",
+        "class": "estado",
+        "type": "hada"
+    },
+    {
+        "name": "cerrojo feerico",
+        "class": "estado",
+        "type": "hada"
+    },
+    {
+        "name": "defensa floral",
+        "class": "estado",
+        "type": "hada"
+    },
+    {
+        "name": "fuerza lunar",
+        "class": "fisico",
+        "type": "hada",
+        "power": 70
+    },
+    {
+        "name": "geocontrol",
+        "class": "estado",
+        "type": "hada"
+    },
+    {
+        "name": "luz aniquiladora",
+        "class": "especial",
+        "type": "hada",
+        "power": 120
+    },    
+    {
+        "name": "niebla aromatica",
+        "class": "estado",
+        "type": "hada",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spdefense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "ojitos tiernos",
+        "class": "estado",
+        "type": "hada",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "truco defensa",
+        "class": "estado",
+        "type": "hada",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "defense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "viento feerico",
+        "class": "especial",
+        "type": "hada",
+        "power": 55,
+        "precision": 100
+    },
+    {
+        "name": "voz cautivadora",
+        "class": "especial",
+        "type": "hada",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spdefense",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "cañon floral",
+        "class": "especial",
+        "type": "hada",
+        "power": 120,
+        "precision": 75,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "spdefense",
+            "points": -2,
+            "probability": 30
+          }
+        ]
+    },     
+    {
+        "name": "cura flora",
+        "class": "estado",
+        "type": "hada",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "hp",
+            "points": 50,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "furia natural",
+        "class": "fisico",
+        "type": "hada",
+        "power": 90,
+        "precision": 100
+    },
+    {
+        "name": "sylveotornado",
+        "class": "especial",
+        "type": "hada",
+        "power": 110,
+        "precision": 85
+    },
+    {
+        "name": "bruma explosiva",
+        "class": "especial",
+        "type": "hada",
+        "power": 80,
+        "precision": 100,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "cautivapor",
+        "class": "estado",
+        "type": "hada",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "spdefense",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },    
+    {
+        "name": "choque animico",
+        "class": "especial",
+        "type": "hada",
+        "power": 80,
+        "precision": 100
+    },
+    {
+        "name": "ciclon primavera",
+        "class": "especial",
+        "type": "hada",
+        "power": 75,
+        "precision": 90,
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "speed",
+            "points": -1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "decoracion",
+        "class": "estado",
+        "type": "hada",
+        "effects": [
+          {
+            "toUser": true,
+            "stat": "attack",
+            "points": 1,
+            "probability": 100
+          }
+        ]
+    },
+    {
+        "name": "gigacastigo",
+        "class": "especial",
+        "type": "hada",
+        "power": 150,
+        "precision": 90
+    },
+    {
+        "name": "gigacolofon",
+        "class": "especial",
+        "type": "hada",
+        "power": 130,
+        "precision": 85
+    },
+    {
+        "name": "maxiestela",
+        "class": "especial",
+        "type": "hada",
+        "power": 110,
+        "precision": 90
+    },
+    {
+        "name": "canto encantador",
+        "class": "estado",
+        "type": "hada",
+        "effects": [
+          {
+            "toUser": false,
+            "stat": "attack",
+            "points": -1,
+            "probability": 50
+          },
+          {
+            "toUser": true,
+            "stat": "spattack",
+            "points": 1,
+            "probability": 50
+          }
+        ]
+    },
+    {
+        "name": "feerichoque",
+        "class": "fisico",
+        "type": "hada",
+        "power": 70,
+        "precision": 100
+    }        
+]
