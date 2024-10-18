@@ -58,20 +58,25 @@ module.exports = class Guild {
             this.countMessages += props.countMessages
 
             if (this.countMessages >= 20) {
+                let corruptChannels = []
                 this.spawnChannels.forEach(async ch => {
                     let channel = message.guild.channels.cache.get(ch)
                     try {
                         const randomValue = Math.random()
-                        if (randomValue < 0.9) {
+                        if (randomValue < 0.95) {
                             await this.sendSpawn(channel)
                         }
                         else await this.sendBox(channel)
                     }
                     catch {
-
+                        corruptChannels.push(ch)
                     }
                 })
                 this.countMessages = 0
+                if (corruptChannels.length > 0) {
+                    let spawnChannels = this.spawnChannels.filter(ch => !corruptChannels.includes(ch))
+                    await this.set(message, { spawnChannels })
+                }
             }
         }
 
