@@ -5,6 +5,7 @@ const Type = require('../pokemon-type')
 const Region = require('../pokemon-region')
 const Specie = require('../pokemon-specie')
 const Movement = require('../pokemon-movement')
+const Nature = require('../pokemon-nature/class')
 
 module.exports = class {
     constructor(props) {
@@ -16,10 +17,11 @@ module.exports = class {
         this._evolutions = props.evolutions || []
         this._stats = props.stats || {}
         this._movements = props.movements || {}
-        this._spawn = this.isSpawn({
-            name: props.name,
-            limitedEdition: props.limitedEdition !== undefined ? props.limitedEdition : false,
-        })
+        this._isMega = props.isMega !== undefined ? props.isMega : false
+        this._isGiga = props.isGiga !== undefined ? props.isGiga : false
+        this._isLegendary = props.isLegendary !== undefined ? props.isLegendary : false
+        this._isMythical = props.isMythical !== undefined ? props.isMythical : false
+        this._isUltraBeast = props.isUltraBeast !== undefined ? props.isUltraBeast : false
     }
 
     getTypes() {
@@ -129,6 +131,7 @@ module.exports = class {
                 if (type) return new Type.Class(type)
                 else return null
             }).filter(Boolean),
+            nature: new Nature(),
             preEvolution: this._preEvolution ? capitalizeWord(this._preEvolution) : null,
             evolutions: this.getEvolutions(),
             stats: this.getStats(),
@@ -137,7 +140,11 @@ module.exports = class {
                 default: (await axios.get(`image?folder=pokemon-form&image=${this._name}`)).url,
                 shiny: (await axios.get(`image?folder=pokemon-form&image=${this._name} shiny`)).url,
             },
-            spawn: this._spawn,
+            isMega: this._isMega,
+            isGiga: this._isGiga,
+            isLegendary: this._isLegendary,
+            isMythical: this._isMythical,
+            isUltraBeast: this._isUltraBeast
         }
     }
 }

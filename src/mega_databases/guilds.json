@@ -1,11 +1,16 @@
 {
   "605628604163817472": {
     "guildId": "605628604163817472",
+    "isVip": false,
     "prefix": "!",
     "status": {
-      "xp": -172,
-      "level": 2
+      "xp": 151,
+      "level": 3
     },
-    "countMessages": 0
+    "countMessages": 1,
+    "spawnChannels": [
+      "1289574695431049309",
+      "1172000992724779069"
+    ]
   }
 }

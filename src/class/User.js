@@ -19,6 +19,7 @@ module.exports = class User {
             newUser = true
         }
 
+        this.isVip = user.isVip || false
         this.role = user.role
         this.status = user.status
 
@@ -38,10 +39,10 @@ module.exports = class User {
             if (level) this.status.level += level
             if (xp) {
                 this.status.xp += xp
-                let levelUp = this.status.level * 100 - this.status.xp <= 0 ? true : false
+                let levelUp = this.status.xp - this.status.level * 100 >= 0 ? true : false
                 if (levelUp) {
-                    this.status.level += 1
                     this.status.xp -= (this.status.level * 100)
+                    this.status.level += 1
                 }
                 if (this.status.xp % 10 === 0) await axios.update('user', {
                     userId: this.userId,

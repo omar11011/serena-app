@@ -5,6 +5,7 @@ module.exports = new Command({
     alias: ['prefijo'],
     description: 'Asigna un prefijo para tu servidor',
     args: ['newPrefix'],
+    userPermissions: ['Administrator'],
     execute: async (message, props) => {
         let prefix = props.args[0]
 

@@ -1,4 +1,5 @@
 const axios = require('../services/axios')
+const memcached = require('../services/memcached')
 const megadb = require('megadb')
 const database = new megadb.crearDB('guilds')
 const createEmbed = require('../utils/createEmbed')
@@ -17,9 +18,11 @@ module.exports = class Guild {
             newGuild = true
         }
 
-        this.prefix = guild.prefix
+        this.isVip = guild.isVip || false
+        this.prefix = guild.prefix || '!'
         this.status = guild.status
         this.countMessages = guild.countMessages || 0
+        this.spawnChannels = guild.spawnChannels || []
 
         if (newGuild) await database.establecer(this.guildId, this)
 
@@ -34,10 +37,10 @@ module.exports = class Guild {
             if (level) this.status.level += level
             if (xp) {
                 this.status.xp += xp
-                let levelUp = this.status.level * 200 - this.status.xp <= 0 ? true : false
+                let levelUp = this.status.xp - this.status.level * 200 >= 0 ? true : false
                 if (levelUp) {
-                    this.status.level += 1
                     this.status.xp -= (this.status.level * 200)
+                    this.status.level += 1
                 }
                 if (this.status.xp % 10 === 0) await axios.update('guild', {
                     guildId: this.guildId,
@@ -46,16 +49,28 @@ module.exports = class Guild {
             }
         }
 
+        if (props.spawnChannels) {
+            if (Array.isArray(props.spawnChannels)) this.spawnChannels = props.spawnChannels
+            else this.spawnChannels.push(props.spawnChannels)
+        }
+
         if (props.countMessages) {
             this.countMessages += props.countMessages
 
-            if (this.countMessages >= 3 ) {
-                const randomValue = Math.random()
-                if (randomValue < 0.9) {
+            if (this.countMessages >= 20) {
+                this.spawnChannels.forEach(async ch => {
+                    let channel = message.guild.channels.cache.get(ch)
+                    try {
+                        const randomValue = Math.random()
+                        if (randomValue < 0.9) {
+                            await this.sendSpawn(channel)
+                        }
+                        else await this.sendBox(channel)
+                    }
+                    catch {
 
-                }
-                else await this.sendBox(message)
-
+                    }
+                })
                 this.countMessages = 0
             }
         }
@@ -83,7 +98,35 @@ module.exports = class Guild {
       return result
     }
 
-    async sendBox(message) {
+    async sendSpawn(channel) {
+        let { Data, Class } = require('../data/pokemon-form')
+
+        let data = JSON.parse(JSON.stringify(Data)).filter(e => !e.isMega && !e.isGiga)
+
+        let pokemon = data[Math.floor(Math.random() * data.length)]
+        pokemon = await (new Class(pokemon)).data()
+
+        let embed = {
+            color: 'green',
+            author: 'Spawn Pokémon',
+            description: 'Ha aparecido un Pokémon salvaje, usa el comando `catch` para capturarlo antes que alguien más lo haga.',
+            image: pokemon.image.default,
+        }
+        
+        channel.send(createEmbed(embed))
+
+        await memcached.createData({
+            key: `spawn-${channel.id}`,
+            data: {
+                pokemon: pokemon.name,
+                specie: pokemon.specie._name,
+            },
+            time: 30,
+        })
+    }
+    
+
+    async sendBox(channel) {
         const embed = {
             color: 'green',
             author: '🎉 Evento',
@@ -91,7 +134,7 @@ module.exports = class Guild {
             thumbnail: process.env.SITE_URL + '/upload/common/box.jpg',
         }
         
-        message.channel.send(createEmbed(embed)).then(async msg => {
+        channel.send(createEmbed(embed)).then(async msg => {
             await msg.react('🎉')
             const users = []
             const filter = (reaction, user) => reaction.emoji.name === '🎉' && !user.bot && !users.includes(user.id)
@@ -115,7 +158,7 @@ module.exports = class Guild {
                         userId,
                         inc: { 'balance.money': money },
                     })
-                    return message.channel.send(`<@${userId}>, has ganado ${money} pokémonedas`)
+                    return channel.send(`<@${userId}>, has ganado ${money} pokémonedas`)
                 }
                 else if (randomValue < 0.98) {
                     console.log('item')
@@ -126,7 +169,7 @@ module.exports = class Guild {
                         userId,
                         inc: { 'balance.gems': gems },
                     })
-                    return message.channel.send(`<@${userId}>, has ganado ${gems} gemas`)
+                    return channel.send(`<@${userId}>, has ganado ${gems} gemas`)
                 }
 
                 embed.description = embed.description.split('.')[0] + `\n\nGanador: <@${userId}>`

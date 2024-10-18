@@ -12,10 +12,10 @@ module.exports = class {
         this._height = props.height
         this._weight = props.weight
         this._category = props.category
-        this._gender = {
+        this._gender = props.gender ? {
             male: props.gender.male || 0,
             female: props.gender.female || 0,
-        }
+        } : null
         this._eggGroup = props.eggGroup || 'desconocido'
         this._growth = props.growth || 'parabolico'
         this._captureRatio = props.captureRatio || 45
@@ -29,6 +29,12 @@ module.exports = class {
         return this._eggGroup
     }
 
+    setGender() {
+        if (!this._gender) return null
+        let isMale = Math.random() * 100 < this._gender.male
+        return isMale ? 'male' : 'female'
+    }
+
     async data() {
         let growth = Growth.Data.find(e => capitalizeWord(e.name) === capitalizeWord(this._growth))
         let habitat = Habitat.Data.find(e => capitalizeWord(e.name) === capitalizeWord(this._habitat))
@@ -39,10 +45,7 @@ module.exports = class {
             height: this._height ? parseFloat(this._height) : '???',
             weight: this._weight ? parseFloat(this._weight) : '???',
             category: this._category ? capitalizeWord(this._category) : null,
-            gender: {
-                male: parseFloat(this._gender.male),
-                female: parseFloat(this._gender.female),
-            } || null,
+            gender: this._gender,
             eggGroup: this._eggGroup.map(e => {
                 const group = EggGroup.Data.find(g => capitalizeWord(g.name) === capitalizeWord(e))
                 if (group) return new EggGroup.Class(group)
