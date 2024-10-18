@@ -1,0 +1,34 @@
+{
+    "name": "mega charizard y",
+    "specie": "charizard",
+    "type": ["fuego"],
+    "preEvolution": "charizard",
+    "evolutions": [],
+    "stats": {
+        "hp": 78,
+        "attack": 104,
+        "defense": 78,
+        "spattack": 159,
+        "spdefense": 115,
+        "speed": 100
+    },
+    "movements": {
+        "nivel": [
+            {"level": 1, "name": "tajo aereo"},
+            {"level": 1, "name": "arañazo"},
+            {"level": 1, "name": "gruñido"},
+            {"level": 1, "name": "ascuas"},
+            {"level": 1, "name": "pantalla de humo"},
+            {"level": 1, "name": "onda ignea"},
+            {"level": 1, "name": "garra dragón"},
+            {"level": 12, "name": "dragoaliento"},
+            {"level": 19, "name": "colmillo igneo"},
+            {"level": 24, "name": "cuchillada"},
+            {"level": 30, "name": "lanzallamas"},
+            {"level": 39, "name": "cara susto"},
+            {"level": 46, "name": "giro fuego"},
+            {"level": 54, "name": "infierno"},
+            {"level": 62, "name": "envite igneo"}
+        ]                                  
+    }       
+}

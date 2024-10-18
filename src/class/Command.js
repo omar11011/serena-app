@@ -17,29 +17,9 @@ module.exports = class Command {
         this.mention = props.mention === undefined ? false : props.mention
         this.userPermissions = props.userPermissions || []
         this.botPermissions = props.botPermissions || []
-        this.channelPermissions = [
-          'AddReactions',
-          'ViewChannel',
-          'SendMessages',
-          'ManageMessages',
-          'EmbedLinks',
-          'AttachFiles',
-          'UseExternalEmojis',
-        ]
         this.execute = props.execute || function() {
             console.log('No se ha definido una función para este comando')
         }
-    }
-
-    checkChannelPermissions(message) {
-      let result = true
-      let myPermissions = message.channel.permissionsFor(message.guild.members.me).toArray()
-
-      for (let i = 0; i < this.channelPermissions.length; i++) {
-        if (!myPermissions.includes(this.channelPermissions[i])) result = false
-      }
-
-      return result
     }
 
     checkUserPermissions(message) {

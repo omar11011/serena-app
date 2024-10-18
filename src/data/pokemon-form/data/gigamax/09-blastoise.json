@@ -1,0 +1,10 @@
+{
+    "name": "blastoise gigamax",
+    "specie": "blastoise",
+    "type": ["agua"],
+    "preEvolution": "blastoise",
+    "evolutions": [],
+    "movements": {
+        "gigamax": ["gigacañonazo"]   
+    }       
+}

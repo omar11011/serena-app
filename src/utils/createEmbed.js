@@ -17,14 +17,17 @@ module.exports = props => {
     if (props.image) embed.setImage(props.image)
     if (props.footer) embed.setFooter({ text: props.footer })
 
+    if (props.thumbnail) embed.setThumbnail(props.thumbnail)
+
     if (props.fields && Array.isArray(props.fields)) {
         props.fields.forEach(e => embed.addFields(e))
     }
 
     if (props.attachment) {
-        let { url, format = 'png' } = props.attachment
-        let imagen = new AttachmentBuilder(path.join(__dirname, `../assets/${url}`), { name: `image.${format}` })
-        embed.setImage(`attachment://image.${format}`)
+        let { url, format = 'png', setImage = true } = props.attachment
+        let imagen = new AttachmentBuilder(path.join(__dirname, `../assets/${url}.${format}`), { name: `image.${format}` })
+        if (setImage) embed.setImage(`attachment://image.${format}`)
+        else embed.setThumbnail(`attachment://image.${format}`)
         files.push(imagen)
     }
 

@@ -3,8 +3,9 @@
     "guildId": "605628604163817472",
     "prefix": "!",
     "status": {
-      "xp": 53,
-      "level": 1
-    }
+      "xp": -172,
+      "level": 2
+    },
+    "countMessages": 0
   }
 }

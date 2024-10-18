@@ -21,10 +21,10 @@ module.exports = new Command({
         let image = pokemon.image.default
 
         if (shiny) image = pokemon.image.shiny
-        
+        console.log(image)
         const embed = createEmbed({
             color: types[0],
-            title: (image ? '⭐ ' : '') + pokemon.name,
+            title: (image && shiny ? '⭐ ' : '') + pokemon.name,
             author: (parseInt(specie.pokedex) ? '#' : '') + `${specie.pokedex} ${specie.name}`,
             description: `Tipo: ${types.join(' / ')}\nCrecimiento: ${growth}\nGrupo Huevo: ${egg.join(' / ')}\nAmistad base: ${specie.friendship}\nRatio de captura: ${specie.captureRatio}`,
             fields: [

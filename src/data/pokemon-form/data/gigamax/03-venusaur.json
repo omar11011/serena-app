@@ -1,0 +1,10 @@
+{
+    "name": "venusaur gigamax",
+    "specie": "venusaur",
+    "type": ["planta", "veneno"],
+    "preEvolution": "venusaur",
+    "evolutions": [],
+    "movements": {
+        "gigamax": ["gigalianas"]                        
+    }       
+}

@@ -1,0 +1,10 @@
+{
+    "name": "charizard gigamax",
+    "specie": "charizard",
+    "type": ["fuego"],
+    "preEvolution": "charizard",
+    "evolutions": [],
+    "movements": {
+        "gigamax": ["gigallamarada"]                                   
+    }       
+}

@@ -1,0 +1,36 @@
+{
+    "name": "mega venusaur",
+    "specie": "venusaur",
+    "type": ["planta", "veneno"],
+    "preEvolution": "venusaur",
+    "evolutions": [],
+    "stats": {
+        "hp": 80,
+        "attack": 100,
+        "defense": 123,
+        "spattack": 122,
+        "spdefense": 120,
+        "speed": 80
+    },
+    "movements": {
+        "nivel": [
+            { "name": "tormenta floral", "level": 1 },
+            { "name": "desarrollo", "level": 1 },
+            { "name": "danza petalo", "level": 1 },
+            { "name": "latigo cepa", "level": 1 },
+            { "name": "placaje", "level": 1 },
+            { "name": "gruñido", "level": 1 },
+            { "name": "drenadoras", "level": 9 },
+            { "name": "hoja afilada", "level": 12 },
+            { "name": "somnifero", "level": 15 },
+            { "name": "polvo veneno", "level": 15 },
+            { "name": "bomba germen", "level": 20 },
+            { "name": "derribo", "level": 25 },
+            { "name": "dulce aroma", "level": 30 },
+            { "name": "sintesis", "level": 37 },
+            { "name": "abatidoras", "level": 44 },
+            { "name": "latigazo", "level": 51 },
+            { "name": "rayo solar", "level": 58 }
+        ]                        
+    }       
+}

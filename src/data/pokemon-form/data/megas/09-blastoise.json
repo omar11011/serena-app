@@ -1,0 +1,34 @@
+{
+    "name": "mega blastoise",
+    "specie": "blastoise",
+    "type": ["agua"],
+    "preEvolution": "blastoise",
+    "evolutions": [],
+    "stats": {
+        "hp": 79,
+        "attack": 103,
+        "defense": 120,
+        "spattack": 135,
+        "spdefense": 115,
+        "speed": 78
+    },
+    "movements": {
+        "nivel": [
+            { "level": 1, "name": "placaje" },
+            { "level": 1, "name": "latigo" },
+            { "level": 1, "name": "pistola agua" },
+            { "level": 1, "name": "refugio" },
+            { "level": 9, "name": "giro rapido" },
+            { "level": 12, "name": "mordisco" },
+            { "level": 15, "name": "hidropulso" },
+            { "level": 20, "name": "proteccion" },
+            { "level": 25, "name": "danza lluvia" },
+            { "level": 30, "name": "acua cola" },
+            { "level": 35, "name": "rompecoraza" },
+            { "level": 42, "name": "defensa ferrea" },
+            { "level": 49, "name": "hidrobomba" },
+            { "level": 56, "name": "envite acuatico" },
+            { "level": 1, "name": "foco resplandor" }
+        ]     
+    }       
+}

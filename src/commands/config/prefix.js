@@ -10,7 +10,7 @@ module.exports = new Command({
 
         if (prefix.length > 2) return message.reply(`El prefijo del servidor no puede tener más de 2 caracteres.`)
         
-        await props.guild.set({ prefix })
+        await props.guild.set(message, { prefix })
 
         return message.reply('El prefijo del servidor ha sido actualizado a: `' + prefix + '`')
     }
