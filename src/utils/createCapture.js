@@ -44,7 +44,7 @@ module.exports = async props => {
         nature: form.nature.random(),
     }
     pokemon.status = {
-        level: Math.ceil(Math.random() * levelBase),
+        level: 1 + Math.ceil(Math.random() * levelBase),
         friendship: form.specie._friendship,
         iv: 0,
     }
