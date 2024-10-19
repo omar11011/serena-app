@@ -23,6 +23,7 @@ module.exports = class User {
         this.isVip = user.isVip || false
         this.role = user.role
         this.status = user.status
+        this.pokemon = user.pokemon || null
 
         if (newUser) await database.establecer(this.userId, this)
 
@@ -51,6 +52,10 @@ module.exports = class User {
                 })
             }
         }
+
+        if (props.isVip) this.isVip = props.isVip
+
+        if(props.pokemon) this.pokemon = props.pokemon
 
         await database.establecer(this.userId, this)
     }

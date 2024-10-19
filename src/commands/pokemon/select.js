@@ -18,19 +18,20 @@ module.exports = new Command({
         if (data.results.length < 1 || !data.results[index]) return message.react('❓')
 
         let pokemon = data.results[index]
+        if (pokemon._id === props.user.pokemon) return message.reply(`Ya tenías seleccionado a **${pokemon.traits.nickname || pokemon.pokemon}**.`)
         
-        let current = await axios.get(`pokemon/captures/${props.user.id}?select=true`)
-        current.results.forEach(async e => {
+        if (props.user.pokemon) {
             await axios.update('pokemon', {
-                _id: e._id,
+                _id: props.user.pokemon,
                 set: { 'options.isSelected': false },
             })
-        })
+        }
 
         await axios.update('pokemon', {
             _id: pokemon._id,
             set: { 'options.isSelected': true },
         })
+        await props.user.set({ pokemon: pokemon._id })
 
         return message.reply(`Acabas de seleccionar a **${pokemon.traits.nickname || pokemon.pokemon}** como compañero.`)
     }
