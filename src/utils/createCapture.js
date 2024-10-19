@@ -46,6 +46,7 @@ module.exports = async props => {
     pokemon.status = {
         level: Math.ceil(Math.random() * levelBase),
         friendship: form.specie._friendship,
+        iv: 0,
     }
     pokemon.features = {
         isShiny: Math.random() < shinyBase / 4096,
@@ -58,7 +59,9 @@ module.exports = async props => {
     Object.keys(form.stats).forEach(e => {
         if (!pokemon.stats) pokemon.stats = {}
         pokemon.stats[e] = statBase + Math.floor(Math.random() * (32 - statBase))
+        pokemon.status.iv += pokemon.stats[e]
     })
+    pokemon.status.iv = (pokemon.status.iv / (31 * 6) * 100).toFixed(2)
     
     return pokemon
 }

@@ -57,7 +57,7 @@ module.exports = class Guild {
         if (props.countMessages) {
             this.countMessages += props.countMessages
 
-            if (this.countMessages >= 20) {
+            if (this.countMessages >= 3) {
                 let corruptChannels = []
                 this.spawnChannels.forEach(async ch => {
                     let channel = message.guild.channels.cache.get(ch)
@@ -126,11 +126,10 @@ module.exports = class Guild {
                 pokemon: pokemon.name,
                 specie: pokemon.specie._name,
             },
-            time: 30,
+            time: 60,
         })
     }
     
-
     async sendBox(channel) {
         const embed = {
             color: 'green',

@@ -12,13 +12,14 @@ module.exports = class User {
         let newUser = false
         let user = await database.obtener(this.userId)
         
-        if (!user) {
+        if (!user || !user.id) {
             if (Object.keys(staff).includes(this.userId)) this.role = staff[this.userId]
 
             user = await axios.create('user', this)
             newUser = true
         }
 
+        this.id = user._id || user.id
         this.isVip = user.isVip || false
         this.role = user.role
         this.status = user.status

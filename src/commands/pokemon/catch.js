@@ -15,16 +15,16 @@ module.exports = new Command({
         if (!spawn) return message.react('❓')
         if (answer !== spawn.pokemon.toLowerCase() && answer !== spawn.specie) return message.react('❌')
 
-        let user = await axios.update('user', { userId: message.author.id })
         let pokemon = await createCapture({
             data: { pokemon: spawn.pokemon },
         })
 
         if (!pokemon) return
 
-        pokemon.owner = user._id
+        pokemon.owner = props.user.id
 
         await axios.create('pokemon', pokemon)
+        await memcached.deleteData(`spawn-${message.channel.id}`)
 
         return message.reply(`¡Felicidades! Has capturado a ${pokemon.features.isShiny ? '⭐ ' : ''}**${pokemon.pokemon}** nivel ${pokemon.status.level}.`)
     }

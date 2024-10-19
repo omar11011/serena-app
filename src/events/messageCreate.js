@@ -47,7 +47,7 @@ module.exports = {
 
         let checkErrors = await command.check(message, props)
         if (checkErrors) return message.reply(checkErrors)
-        
+            
         try {
             await command.execute(message, props)
             await command.checkSendCaptcha(message.author.id)
