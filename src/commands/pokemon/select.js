@@ -5,13 +5,14 @@ module.exports = new Command({
     name: 'select',
     description: 'Selecciona un Pokémon.',
     args: ['id'],
+    cooldown: 4,
     execute: async (message, props) => {
         let id = props.args[0]
         let limit = 20
 
         if (isNaN(id) || parseInt(id) < 1) return message.react('❓')
         else id = parseInt(id)
-
+        
         let page = Math.ceil(id / limit)
         let index = id - (page - 1) * limit - 1
         let data = await axios.get(`pokemon/captures/${props.user.id}?page=${page}`)

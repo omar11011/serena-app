@@ -1,13 +1,16 @@
 {
   "422521493126250506": {
     "userId": "422521493126250506",
-    "id": "6702d0abcc674d7f59ff1663",
-    "isVip": false,
-    "role": "owner",
-    "status": {
-      "xp": 52,
-      "level": 3
+    "features": {
+      "isVip": false,
+      "isAdmin": false,
+      "isOwner": true
     },
-    "pokemon": "67133fd92a3f7d30338ebe5a"
+    "id": "671528ccad5bcdb137eb6557",
+    "status": {
+      "level": 1,
+      "xp": 6
+    },
+    "pokemon": "67152bf3e083c0e5ee0da50a"
   }
 }

@@ -1,14 +1,20 @@
-const { Client, Collection, GatewayIntentBits, Options } = require('discord.js')
+const { Client, Collection, GatewayIntentBits, Partials, Options } = require('discord.js')
 
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMessages,
         GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.GuildPresences,
+        GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent,
         GatewayIntentBits.GuildMessageReactions,
     ],
-    partials: ['MESSAGE', 'CHANNEL', 'REACTION', 'GUILD_MEMBER'],
+    partials: [
+        Partials.Message,
+        Partials.Channel,
+        Partials.Reaction,
+        Partials.GuildMember,
+    ],
     makeCache: Options.cacheWithLimits(Options.DefaultMakeCacheSettings),
 })
 

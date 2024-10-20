@@ -49,13 +49,12 @@ module.exports = class Command {
     }
 
     checkEnabled(role) {
-      let allowedRoles = ['programmer', 'owner']
-      if (!this.enabled && !allowedRoles.includes(role)) return 'Este comando se encuentra deshabilitado temporalmente.'
+      if (!this.enabled && (!role.isOwner || !role.isProgrammer)) return 'Este comando se encuentra deshabilitado temporalmente.'
       return null
     }
 
     checkOnlyAdmin(role) {
-      if (role === 'trainer') return 'Este comando sólo está habilitado para mis administradores.'
+      if (this.onlyAdmin && (!role.isAdmin || !role.isOwner || role.isProgrammer)) return 'Este comando sólo está habilitado para mis administradores.'
       return null
     }
 
@@ -164,10 +163,10 @@ module.exports = class Command {
     async check(message, props) {
       const { user, guild, args } = props
       
-      let enabledError = this.checkEnabled(user.role)
+      let enabledError = this.checkEnabled(user.features)
       if (enabledError) return enabledError
 
-      let onlyAdminError = this.checkOnlyAdmin(user.role)
+      let onlyAdminError = this.checkOnlyAdmin(user.features)
       if (onlyAdminError) return onlyAdminError
 
       let userPermissionsError = this.checkUserPermissions(message)

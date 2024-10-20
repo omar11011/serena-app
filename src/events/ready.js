@@ -7,4 +7,4 @@ module.exports = {
 	execute(client) {
 		bigMessage(client.user.username)
 	},
-};
+}

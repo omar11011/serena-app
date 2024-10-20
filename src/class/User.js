@@ -4,8 +4,15 @@ const megadb = require('megadb')
 const database = new megadb.crearDB('users')
 
 module.exports = class User {
-    constructor(userId) {
-        this.userId = userId
+    constructor(props) {
+        this.userId = props.id
+        this.discordData = props
+        this.features = {
+            isVip: false,
+            isAdmin: false,
+            isProgrammer: false,
+            isOwner: false,
+        }
     }
 
     async get() {
@@ -13,17 +20,25 @@ module.exports = class User {
         let user = await database.obtener(this.userId)
         
         if (!user || !user.id) {
-            if (Object.keys(staff).includes(this.userId)) this.role = staff[this.userId]
-
-            user = await axios.create('user', this)
+            if (staff[this.userId]) {
+                if (staff[this.userId] === 'owner') this.features.isOwner = true
+                else if (staff[this.userId] === 'programmer') this.features.isAdmin = true
+                else if (staff[this.userId] === 'admin') this.features.isAdmin = true
+            }
+            
+            user = await axios.update('user', {
+                userId: this.userId,
+                set: this,
+            })
             newUser = true
         }
 
         this.id = user._id || user.id
-        this.isVip = user.isVip || false
-        this.role = user.role
+        this.features = user.features || {}
         this.status = user.status
         this.pokemon = user.pokemon || null
+
+        delete this.discordData
 
         if (newUser) await database.establecer(this.userId, this)
 
@@ -31,11 +46,6 @@ module.exports = class User {
     }
 
     async set(props) {
-        if (props.role) {
-            const roles = ['trainer', 'admin', 'programmer', 'owner']
-            if (roles.includes(props.role)) this.role = props.role
-        }
-
         if (props.status) {
             let { xp, level } = props.status
             if (level) this.status.level += level
@@ -53,7 +63,12 @@ module.exports = class User {
             }
         }
 
-        if (props.isVip) this.isVip = props.isVip
+        if (props.features) {
+            this.features = {
+                ...this.features,
+                ...props.features,
+            }
+        }
 
         if(props.pokemon) this.pokemon = props.pokemon
 

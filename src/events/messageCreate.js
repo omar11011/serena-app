@@ -9,7 +9,7 @@ module.exports = {
 	async execute(message) {
         if (message.author.bot) return
 
-        const user = new User(message.author.id)
+        const user = new User(message.author)
         const guild = new Guild(message.guild.id)
         const props = {
             user: await user.get(),
