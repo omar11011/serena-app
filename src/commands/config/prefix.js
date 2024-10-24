@@ -1,4 +1,5 @@
 const Command = require('../../class/Command')
+const createEmbed = require('../../utils/createEmbed')
 
 module.exports = new Command({
     name: 'prefix',
@@ -7,12 +8,19 @@ module.exports = new Command({
     args: ['newPrefix'],
     userPermissions: ['Administrator'],
     execute: async (message, props) => {
-        let prefix = props.args[0]
+        const { guild, args } = props
+        const prefix = args[0]
+        const embed = {}
 
-        if (prefix.length > 2) return message.reply(`El prefijo del servidor no puede tener más de 2 caracteres.`)
-        
-        await props.guild.set(message, { prefix })
+        if (prefix.length > 2) {
+            embed.color = 'red'
+            embed.description = `El prefijo del servidor no puede tener más de 2 caracteres.`
+        }
+        else {
+            embed.description = 'El prefijo del servidor ha sido actualizado a: `' + prefix + '`'
+            await guild.setPrefix(prefix)
+        }
 
-        return message.reply('El prefijo del servidor ha sido actualizado a: `' + prefix + '`')
+        return message.reply(createEmbed(embed))
     }
 })

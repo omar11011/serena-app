@@ -1,6 +1,7 @@
 const Command = require('../../class/Command')
 const axios = require('../../services/axios')
 const memcached = require('../../services/memcached')
+const createEmbed = require('../../utils/createEmbed')
 const createCapture = require('../../utils/createCapture')
 
 module.exports = new Command({
@@ -21,11 +22,13 @@ module.exports = new Command({
 
         if (!pokemon) return
 
-        pokemon.owner = props.user.id
+        pokemon.owner = props.user._id
 
         await axios.create('pokemon', pokemon)
         await memcached.deleteData(`spawn-${message.channel.id}`)
 
-        return message.reply(`¡Felicidades! Has capturado a ${pokemon.features.isShiny ? '⭐ ' : ''}**${pokemon.pokemon}** nivel ${pokemon.status.level}.`)
+        return message.reply(createEmbed({
+            description: `¡Felicidades! Has capturado a ${pokemon.features.isShiny ? '⭐ ' : ''}**${pokemon.pokemon}** nivel ${pokemon.status.level}.`,
+        }))
     }
 })

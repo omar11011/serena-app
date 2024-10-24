@@ -4,16 +4,16 @@ const axios = require('../services/axios')
 module.exports = {
 	name: Events.UserUpdate,
 	async execute(oldUser, newUser) {
-        const newData = {}
+        const discordData = {}
 
         Object.keys(oldUser).forEach(e => {
-            newData[e] = newUser[e]
+            discordData[e] = newUser[e]
         })
 
-        if (Object.keys(newData).length > 0) {
+        if (Object.keys(discordData).length > 0) {
             await axios.update('user', {
                 userId: newUser.id,
-                set: { discordData: newData },
+                set: { discordData },
             })
         }
 	},

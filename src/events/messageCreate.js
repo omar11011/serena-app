@@ -9,12 +9,11 @@ module.exports = {
 	async execute(message) {
         if (message.author.bot) return
 
-        const user = new User(message.author)
+        const user = new User(message.author.id)
         const guild = new Guild(message.guild.id)
-        const props = {
-            user: await user.get(),
-            guild: await guild.get(),
-        }
+        
+        await user.load(message.author)
+        await guild.load(message.guild)
 
         let checkChannelPermissions = guild.checkChannelPermissions(message)
         if (!checkChannelPermissions) return
@@ -22,30 +21,29 @@ module.exports = {
         if (!message.content.startsWith(guild.prefix)) {
             // Mención al bot
             if (message.mentions.users.has(message.client.user.id)) {
-                return message.reply(`Mi prefijo en el servidor es: ` + '`' + props.guild.prefix +'`')
+                return message.reply(`Mi prefijo en el servidor es: ` + '`' + guild.prefix +'`')
             }
 
             if (message.content.length > 5) {
-                await user.set({ status: { xp: 1 } })
-                await guild.set(message, {
-                    status: { xp: 1 },
-                    countMessages: 1,
-                })
+                await user.addXP(1)
+                await guild.addXP(1)
+                await guild.event(message, 1)
             }
             
             return
         }
 
-        props.args = message.content.slice(props.guild.prefix.length).split(/ +/)
-        const nameCommand = props.args.shift().toLowerCase()
+        const args = message.content.slice(guild.prefix.length).split(/ +/)
+        const nameCommand = args.shift().toLowerCase()
         const command = message.client.commands.find(e => e.name === nameCommand || e.alias.includes(nameCommand))
         
         if (!command) return
 
-        let solveCaptcha = await command.solveCaptcha(message, message.author.id)
+        const solveCaptcha = await command.solveCaptcha(message, message.author.id)
         if (!solveCaptcha) return
 
-        let checkErrors = await command.check(message, props)
+        const props = { user, guild, args }
+        const checkErrors = await command.check(message, props)
         if (checkErrors) return message.reply(checkErrors)
             
         try {

@@ -127,20 +127,20 @@ module.exports = class {
             "Audaz": { attack: 1, defense: 0, spattack: 0, spdefense: 0, speed: -1 },
             "Firme": { attack: 1, defense: 0, spattack: -1, spdefense: 0, speed: 0 },
             "Modesta": { attack: -1, defense: 0, spattack: 1, spdefense: 0, speed: 0 },
-            "Dócil": { attack: 0, defense: 0, spattack: 0, spdefense: 0, speed: 0 },
+            "Docil": { attack: 0, defense: 0, spattack: 0, spdefense: 0, speed: 0 },
             "Afable": { attack: 0, defense: -1, spattack: 1, spdefense: 0, speed: 0 },
             "Activa": { attack: 0, defense: -1, spattack: 0, spdefense: 0, speed: 1 },
             "Serena": { attack: 0, defense: 0, spattack: 0, spdefense: 1, speed: -1 },
             "Miedosa": { attack: -1, defense: 0, spattack: 0, spdefense: 0, speed: 1 },
             "Floja": { attack: 0, defense: 1, spattack: 0, spdefense: -1, speed: 0 },
             "Agitada": { attack: 0, defense: 1, spattack: 0, spdefense: -1, speed: 0 },
-            "Tímida": { attack: 0, defense: 0, spattack: 0, spdefense: 0, speed: 0 },
+            "Timida": { attack: 0, defense: 0, spattack: 0, spdefense: 0, speed: 0 },
             "Cauta": { attack: 0, defense: 0, spattack: -1, spdefense: 1, speed: 0 },
-            "Pícara": { attack: 1, defense: 0, spattack: 0, spdefense: -1, speed: 0 },
+            "Picara": { attack: 1, defense: 0, spattack: 0, spdefense: -1, speed: 0 },
             "Alocada": { attack: 0, defense: 0, spattack: 1, spdefense: -1, speed: 0 },
             "Rara": { attack: 0, defense: 0, spattack: 0, spdefense: 0, speed: 0 },
             "Ingenua": { attack: 0, defense: 0, spattack: -1, spdefense: 0, speed: 1 },
-            "Plácida": { attack: 0, defense: 1, spattack: 0, spdefense: 0, speed: -1 },
+            "Placida": { attack: 0, defense: 1, spattack: 0, spdefense: 0, speed: -1 },
             "Mansa": { attack: 0, defense: 0, spattack: 1, spdefense: 0, speed: -1 },
             "Grosera": { attack: 0, defense: 0, spattack: 0, spdefense: 1, speed: -1 },
             "Seria": { attack: 0, defense: 0, spattack: 0, spdefense: 0, speed: 0 },
@@ -154,14 +154,14 @@ module.exports = class {
         const power = {}
         const level = pokemon.status.level
         const effects = this.effects(pokemon.traits.nature)
-
+        
         Object.keys(this._stats).forEach(e => {
             const iv = pokemon.stats[e]
             const base = this._stats[e]
             const ev = pokemon.effortValues[e]
-
+            
             power[e] = (2 * base + iv + ev / 4) * level / 100
-
+            
             if (e === 'hp') {
                 power[e] = power[e] + level + 10
                 power[e] *= (1 + (3 / Math.pow(level, 0.5)))

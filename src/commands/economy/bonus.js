@@ -1,5 +1,6 @@
 const Command = require('../../class/Command')
 const axios = require('../../services/axios')
+const createEmbed = require('../../utils/createEmbed')
 
 module.exports = new Command({
     name: 'bonus',
@@ -14,6 +15,8 @@ module.exports = new Command({
             inc: { 'balance.money': money },
         })
 
-        return message.reply(`Has ganado ${money} pokémonedas.`)
+        return message.reply(createEmbed({
+            description: `Has ganado ${money} pokémonedas.`,
+        }))
     }
 })

@@ -1,5 +1,6 @@
 const Command = require('../../class/Command')
 const axios = require('../../services/axios')
+const createEmbed = require('../../utils/createEmbed')
 
 module.exports = new Command({
     name: 'select',
@@ -7,7 +8,8 @@ module.exports = new Command({
     args: ['id'],
     cooldown: 4,
     execute: async (message, props) => {
-        let id = props.args[0]
+        let { user, args } = props
+        let id = args[0]
         let limit = 20
 
         if (isNaN(id) || parseInt(id) < 1) return message.react('❓')
@@ -15,15 +17,20 @@ module.exports = new Command({
         
         let page = Math.ceil(id / limit)
         let index = id - (page - 1) * limit - 1
-        let data = await axios.get(`pokemon/captures/${props.user.id}?page=${page}`)
+        let data = await axios.get(`pokemon/captures/${user._id}?page=${page}`)
         if (data.results.length < 1 || !data.results[index]) return message.react('❓')
 
         let pokemon = data.results[index]
-        if (pokemon._id === props.user.pokemon) return message.reply(`Ya tenías seleccionado a **${pokemon.traits.nickname || pokemon.pokemon}**.`)
+        if (pokemon._id === user.pokemon) {
+            return message.reply(createEmbed({
+                color: 'yellow',
+                description: `Ya tenías seleccionado a **${pokemon.traits.nickname || pokemon.pokemon}**.`,
+            }))
+        }
         
-        if (props.user.pokemon) {
+        if (user.pokemon) {
             await axios.update('pokemon', {
-                _id: props.user.pokemon,
+                _id: user.pokemon,
                 set: { 'options.isSelected': false },
             })
         }
@@ -32,8 +39,10 @@ module.exports = new Command({
             _id: pokemon._id,
             set: { 'options.isSelected': true },
         })
-        await props.user.set({ pokemon: pokemon._id })
+        await user.setPokemon(pokemon._id)
 
-        return message.reply(`Acabas de seleccionar a **${pokemon.traits.nickname || pokemon.pokemon}** como compañero.`)
+        return message.reply(createEmbed({
+            description: `Acabas de seleccionar a **${pokemon.traits.nickname || pokemon.pokemon}** como compañero.`,
+        }))
     }
 })

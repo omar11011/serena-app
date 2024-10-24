@@ -8,6 +8,7 @@ module.exports = new Command({
     execute: async (message, props) => {
         const { url } = await axios.get('image/random?folder=gifs&subfolder=angry')
         const embed = createEmbed({
+            color: 'random',
             description: `**${message.author.globalName}** se enojó.`,
             image: url,
         })

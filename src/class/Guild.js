@@ -9,75 +9,115 @@ module.exports = class Guild {
         this.guildId = guildId
     }
 
-    async get() {
-        let newGuild = false
-        let guild = await database.obtener(this.guildId)
+    async load(discordData) {
+        let data = await database.obtener(this.guildId) || {}
         
-        if (!guild) {
-            guild = await axios.create('guild', this)
-            newGuild = true
+        if (!data._id) {
+            let guild = await axios.update('guild', {
+                guildId: this.guildId,
+                set: { discordData },
+            })
+            
+            data._id = guild._id
+            data.xp = guild.status.xp
+            data.prefix = guild.config.prefix
+            data.count = guild.count || 0
+            data.channels = guild.channels
+
+            await database.establecer(this.guildId, data)
         }
 
-        this.isVip = guild.isVip || false
-        this.prefix = guild.prefix || '!'
-        this.status = guild.status
-        this.countMessages = guild.countMessages || 0
-        this.spawnChannels = guild.spawnChannels || []
-
-        if (newGuild) await database.establecer(this.guildId, this)
-
-        return this
+        this._id = data._id
+        this.xp = data.xp
+        this.prefix = data.prefix
+        this.count = data.count || 0
+        this.channels = data.channels || {}
     }
 
-    async set(message, props) {
-        if (props.prefix) this.prefix = props.prefix
+    async addXP(xp) {
+        this.xp += xp
 
-        if (props.status) {
-            let { xp, level } = props.status
-            if (level) this.status.level += level
-            if (xp) {
-                this.status.xp += xp
-                let levelUp = this.status.xp - this.status.level * 200 >= 0 ? true : false
-                if (levelUp) {
-                    this.status.xp -= (this.status.level * 200)
-                    this.status.level += 1
-                }
-                if (this.status.xp % 10 === 0) await axios.update('guild', {
+        if (this.xp >= 10) {
+            let guild = await axios.update('guild', {
+                guildId: this.guildId,
+                inc: { 'status.xp': this.xp },
+            })
+            let levelUp = guild.status.xp - guild.status.level * 200 >= 0 ? true : false
+    
+            if (levelUp) {
+                guild = await axios.update('guild', {
                     guildId: this.guildId,
-                    set: this,
+                    inc: {
+                        'status.level': 1,
+                        'status.xp': -(guild.status.level * 200)
+                    },
                 })
             }
+
+            this.xp = 0
         }
 
-        if (props.spawnChannels) {
-            if (Array.isArray(props.spawnChannels)) this.spawnChannels = props.spawnChannels
-            else this.spawnChannels.push(props.spawnChannels)
+        await database.establecer(this.guildId, this)
+    }
+
+    async setPrefix(prefix) {
+        this.prefix = prefix
+
+        await axios.update('guild', {
+            guildId: this.guildId,
+            set: { 'config.prefix': prefix },
+        })
+        await database.establecer(this.guildId, this)
+    }
+
+    async addSpawn(channel) {
+        if (!this.channels.spawn.includes(channel)) {
+            this.channels.spawn.push(channel)
+
+            await database.establecer(this.guildId, this)
+            await axios.update('guild', {
+                guildId: this.guildId,
+                set: { 'channels.spawn': this.channels.spawn },
+            })
+
+            return true
         }
+        return false
+    }
 
-        if (props.countMessages) {
-            this.countMessages += props.countMessages
+    async dropSpawn(channel) {
+        if (this.channels.spawn.includes(channel)) {
+            this.channels.spawn = this.channels.spawn.filter(e => e !== channel)
 
-            if (this.countMessages >= 3) {
-                let corruptChannels = []
-                this.spawnChannels.forEach(async ch => {
-                    let channel = message.guild.channels.cache.get(ch)
-                    try {
-                        const randomValue = Math.random()
-                        if (randomValue < 0.95) {
-                            await this.sendSpawn(channel)
-                        }
-                        else await this.sendBox(channel)
+            await database.establecer(this.guildId, this)
+            await axios.update('guild', {
+                guildId: this.guildId,
+                set: { 'channels.spawn': this.channels.spawn },
+            })
+
+            return true
+        }
+        return false
+    }
+
+    async event(message, count) {
+        this.count += count
+
+        if (this.count > 3) {
+            this.channels.spawn.forEach(async ch => {
+                let channel = message.guild.channels.cache.get(ch)
+                try {
+                    const randomValue = Math.random()
+                    if (randomValue < 0.95) {
+                        await this.sendSpawn(channel)
                     }
-                    catch {
-                        corruptChannels.push(ch)
-                    }
-                })
-                this.countMessages = 0
-                if (corruptChannels.length > 0) {
-                    let spawnChannels = this.spawnChannels.filter(ch => !corruptChannels.includes(ch))
-                    await this.set(message, { spawnChannels })
+                    else await this.sendBox(channel)
                 }
-            }
+                catch {
+                    await this.dropSpawn(ch)
+                }
+            })
+            this.count = 0
         }
 
         await database.establecer(this.guildId, this)

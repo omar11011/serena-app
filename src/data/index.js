@@ -2,8 +2,11 @@ const capitalizeWord = require('../utils/capitalizeWords')
 
 const getData = async (key, value) => {
     try {
-        const { Class, Data } = require(`./pokemon-${key}`)
-        const result = Data.find(e => capitalizeWord(e.name) === capitalizeWord(value))
+        let { Class, Data } = require(`./pokemon-${key}`)
+        let result = Data.find(e => capitalizeWord(e.name) === capitalizeWord(value))
+
+        result = JSON.parse(JSON.stringify(result))
+
         return new Class(result)
     }
     catch {

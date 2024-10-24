@@ -16,13 +16,12 @@ module.exports = new Command({
         // Listar canales
         if (list || !isAdmin) {
             let embed = {
-                color: 'green',
                 author: 'Canales de Spawn',
                 description: 'Este servidor aún no tiene ningún canal de spawn.',
             }
-            if (guild.spawnChannels.length > 0) {
+            if (guild.channels.spawn.length > 0) {
                 embed.description = 'A continuación observarás los canales de tu servidor en los cuales aparecerán Pokémon salvajes y eventos, en caso quieras eliminar alguno usa el comando `' + guild.prefix + 'redirect <channel> delete`.'
-                embed.fields = guild.spawnChannels.map((e, i) => {
+                embed.fields = guild.channels.spawn.map((e, i) => {
                     return { name: `Spawn #${i + 1}`, value: `<#${e}>`, inline: true }
                 })
             }
@@ -31,22 +30,39 @@ module.exports = new Command({
 
         // Eliminar canal
         if (drop) {
-            if (!guild.spawnChannels.includes(channel.id)) return message.reply(`Este canal no formaba parte de los spawns del servidor.`)
+            const drop = await guild.dropSpawn(channel.id)
 
-            let spawnChannels = guild.spawnChannels.filter(e => e !== channel.id)
-            await guild.set(message, { spawnChannels })
-
-            return message.reply(`Se ha eliminado el canal <#${channel.id}> de los spawns del servidor.`)
+            if (drop) {
+                return message.reply(createEmbed({
+                    description: `Se ha eliminado el canal <#${channel.id}> de los spawns del servidor.`,
+                }))
+            }
+            else {
+                return message.reply(createEmbed({
+                    color: 'red',
+                    description: `Este canal no formaba parte de los spawns del servidor.`,
+                }))
+            }
         }
         
         // Agregar canal
-        if (guild.spawnChannels.includes(channel.id)) return message.reply(`Este canal ya forma parte de los spawn del servidor.`)
-        if ((!guild.isVip && guild.spawnChannels.length >= 2) || (guild.isVip && guild.spawnChannels.length >= 5)) {
-            return message.reply(`El servidor ya no puede tener más canales de spawn.`)
+        if (guild.channels.spawn.includes(channel.id)) {
+            return message.reply(createEmbed({
+                color: 'yellow',
+                description: `Este canal ya forma parte de los spawn del servidor.`,
+            }))
+        }
+        if ((!guild.isVip && guild.channels.spawn.length >= 2) || (guild.isVip && guild.channels.spawn.length >= 5)) {
+            return message.reply(createEmbed({
+                color: 'red',
+                description: `El servidor ya no puede tener más canales de spawn.`,
+            }))
         }
 
-        await guild.set(message, { spawnChannels: channel.id })
+        await guild.addSpawn(channel.id)
 
-        return message.reply(`Has añadido el canal <#${channel.id}> a los spawns del servidor.`)
+        return message.reply(createEmbed({
+            description: `Has añadido el canal <#${channel.id}> a los spawns del servidor.`,
+        }))
     }
 })

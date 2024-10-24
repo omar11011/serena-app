@@ -10,7 +10,6 @@ module.exports = new Command({
         let user = await axios.get(`user/${message.author.id}`)
         
         const embed = createEmbed({
-            color: 'green',
             title: `Balance de ${message.author.globalName}`,
             description: 'Actualmente tienes lo siguiente en tus fondos:',
             fields: [

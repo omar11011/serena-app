@@ -1,77 +1,73 @@
 const axios = require('../services/axios')
 const staff = require('../json/staff.json')
+
 const megadb = require('megadb')
 const database = new megadb.crearDB('users')
 
 module.exports = class User {
-    constructor(props) {
-        this.userId = props.id
-        this.discordData = props
-        this.features = {
-            isVip: false,
-            isAdmin: false,
-            isProgrammer: false,
-            isOwner: false,
-        }
+    constructor(userId) {
+        this.userId = userId
     }
 
-    async get() {
-        let newUser = false
-        let user = await database.obtener(this.userId)
+    async load(discordData) {
+        let data = await database.obtener(this.userId) || {}
         
-        if (!user || !user.id) {
-            if (staff[this.userId]) {
-                if (staff[this.userId] === 'owner') this.features.isOwner = true
-                else if (staff[this.userId] === 'programmer') this.features.isAdmin = true
-                else if (staff[this.userId] === 'admin') this.features.isAdmin = true
+        if (!data._id) {
+            const roles = {}
+            const staffRoles = Object.keys(staff)
+
+            for (let i = 0; i < staffRoles.length; i++) {
+                if (staff[staffRoles[i]].includes(this.userId)) {
+                    data.role = staffRoles[i]
+                    roles[`is${staffRoles[i]}`] = true
+                }
             }
             
-            user = await axios.update('user', {
+            let user = await axios.update('user', {
                 userId: this.userId,
-                set: this,
+                set: { discordData, roles },
             })
-            newUser = true
+            
+            data._id = user._id
+            data.xp = user.status.xp
+            
+            await database.establecer(this.userId, data)
         }
 
-        this.id = user._id || user.id
-        this.features = user.features || {}
-        this.status = user.status
-        this.pokemon = user.pokemon || null
-
-        delete this.discordData
-
-        if (newUser) await database.establecer(this.userId, this)
-
-        return this
+        this._id = data._id
+        this.xp = data.xp || 0
+        this.role = data.role
+        this.pokemon = data.pokemon
     }
 
-    async set(props) {
-        if (props.status) {
-            let { xp, level } = props.status
-            if (level) this.status.level += level
-            if (xp) {
-                this.status.xp += xp
-                let levelUp = this.status.xp - this.status.level * 100 >= 0 ? true : false
-                if (levelUp) {
-                    this.status.xp -= (this.status.level * 100)
-                    this.status.level += 1
-                }
-                if (this.status.xp % 10 === 0) await axios.update('user', {
+    async addXP(xp) {
+        this.xp += xp
+
+        if (this.xp >= 10) {
+            let user = await axios.update('user', {
+                userId: this.userId,
+                inc: { 'status.xp': this.xp },
+            })
+            let levelUp = user.status.xp - user.status.level * 100 >= 0 ? true : false
+    
+            if (levelUp) {
+                user = await axios.update('user', {
                     userId: this.userId,
-                    set: this,
+                    inc: {
+                        'status.level': 1,
+                        'status.xp': -(user.status.level * 100)
+                    },
                 })
             }
+
+            this.xp = 0
         }
 
-        if (props.features) {
-            this.features = {
-                ...this.features,
-                ...props.features,
-            }
-        }
+        await database.establecer(this.userId, this)
+    }
 
-        if(props.pokemon) this.pokemon = props.pokemon
-
+    async setPokemon(id) {
+        this.pokemon = id
         await database.establecer(this.userId, this)
     }
 }

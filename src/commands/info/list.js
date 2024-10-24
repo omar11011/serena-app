@@ -10,7 +10,7 @@ module.exports = new Command({
         let { user, args } = props
         let queries = []
         let name = []
-        let url = `pokemon/captures/${user.id}?`
+        let url = `pokemon/captures/${user._id}?`
 
         args.forEach(e => {
             if (e === '-s') queries.push('shiny=true')
@@ -50,7 +50,6 @@ module.exports = new Command({
 
 function embedList(data) {
     return {
-        color: 'green',
         title: `Capturas Pokémon`,
         description: 'Responde `next` para pasar a la siguiente página y `back` para retroceder.\n\n' + data.results.map(e => {
             return `${e.features.isShiny ? '⭐ ' : ''}**${e.traits.nickname || e.pokemon}** | ID: ${e.index} | Lvl ${e.status.level} | IV: ${e.status.iv}%`

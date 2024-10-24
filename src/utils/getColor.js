@@ -1,4 +1,5 @@
 const data = require("../json/colors.json")
+const capitalizeWord = require('./capitalizeWords')
 
 const randomColor = () => {
     let colors = Object.keys(data)
@@ -8,9 +9,10 @@ const randomColor = () => {
 }
 
 const getColor = name => {
-    if (!name) name = 'test'
+    if (!name) name = 'LimeGreen'
     name = name.toLowerCase()
-    let color = data[name]
+    let color = Object.keys(data).find(e => capitalizeWord(e) === capitalizeWord(name))
+    color = data[color]
     if (!color) color = data[randomColor()]
 
     return {
