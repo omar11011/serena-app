@@ -1,7 +1,7 @@
 const Command = require('../../class/Command')
 const axios = require('../../services/axios')
-const Data = require('../../data')
 const createEmbed = require('../../utils/createEmbed')
+const calculateXpNeeded = require('../../functions/xpNeeded')
 
 module.exports = new Command({
     name: 'train',
@@ -16,32 +16,32 @@ module.exports = new Command({
             return message.reply(createEmbed(embed))
         }
 
-        const xp = Math.ceil(Math.random() * 7)
+        const xp = Math.ceil(Math.random() * 15)
         const friendship = Math.random() > 0.8 ? 1 : 0
-        const pokemon = await axios.update('pokemon', {
+        const pokemon = await axios.update('pokemon-capture', {
             _id: props.user.pokemon,
             inc: {
                 'status.xp': xp,
                 'status.friendship': friendship,
             },
         })
-        const form = await (await Data.get('form', pokemon.pokemon)).data()
-        const specie = await form.specie.data()
-        const xpNeeded = specie.growth.xpNeeded(pokemon.status.level)
+
+        const currentPokemon = await axios.get(`pokemon-capture/${props.user.pokemon}`)
+        const xpNeeded = calculateXpNeeded(currentPokemon)
         
-        const levelUp = pokemon.status.xp >= xpNeeded
+        const levelUp = currentPokemon.status.xp >= xpNeeded
         if (levelUp) {
-            await axios.update('pokemon', {
-                _id: pokemon._id,
-                set: { 'status.xp': pokemon.status.xp - xpNeeded },
+            await axios.update('pokemon-capture', {
+                _id: currentPokemon._id,
+                set: { 'status.xp': currentPokemon.status.xp - xpNeeded },
                 inc: { 'status.level': 1 },
             })
 
-            embed.description = `**${pokemon.traits.nickname || pokemon.pokemon}** ha alcanzado el nivel ${pokemon.status.level + 1}.`
+            embed.description = `**${currentPokemon.traits.nickname || currentPokemon.pokemon.name}** ha alcanzado el nivel ${currentPokemon.status.level + 1}.`
             return message.reply(createEmbed(embed))
         }
 
-        embed.description = `**${pokemon.traits.nickname || pokemon.pokemon}** ha ganado ${xp} puntos de experiencia.`
+        embed.description = `**${currentPokemon.traits.nickname || currentPokemon.pokemon.name}** ha ganado ${xp} puntos de experiencia.`
         return message.reply(createEmbed(embed))
     }
 })

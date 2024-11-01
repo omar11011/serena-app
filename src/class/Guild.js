@@ -108,9 +108,7 @@ module.exports = class Guild {
                 let channel = message.guild.channels.cache.get(ch)
                 try {
                     const randomValue = Math.random()
-                    if (randomValue < 0.95) {
-                        await this.sendSpawn(channel)
-                    }
+                    if (randomValue < 0.95) await this.sendSpawn(channel)
                     else await this.sendBox(channel)
                 }
                 catch {
@@ -144,27 +142,19 @@ module.exports = class Guild {
     }
 
     async sendSpawn(channel) {
-        let { Data, Class } = require('../data/pokemon-form')
-
-        let data = JSON.parse(JSON.stringify(Data)).filter(e => !e.isMega && !e.isGiga)
-
-        let pokemon = data[Math.floor(Math.random() * data.length)]
-        pokemon = await (new Class(pokemon)).data()
-
-        let embed = {
-            color: 'green',
+        let pokemon = await axios.get('pokemon-form/spawn')
+        
+        channel.send(createEmbed({
             author: 'Spawn Pokémon',
             description: 'Ha aparecido un Pokémon salvaje, usa el comando `catch` para capturarlo antes que alguien más lo haga.',
-            image: pokemon.image.default,
-        }
-        
-        channel.send(createEmbed(embed))
+            image: pokemon.image,
+        }))
 
         await memcached.createData({
             key: `spawn-${channel.id}`,
             data: {
                 pokemon: pokemon.name,
-                specie: pokemon.specie._name,
+                specie: pokemon.specie.name,
             },
             time: 60,
         })

@@ -1,21 +1,10 @@
 const DATA = require('../data')
+const axios = require('../services/axios')
 
 module.exports = async props => {
     const pokemon = {}
-    const { data, userIsVip, redeem } = props
-
-    Object.keys(data).forEach(e => {
-        pokemon[e] = data[e]
-    })
-
-    let form = await DATA.get('form', pokemon.pokemon)
-
-    if (!form) return null
-    else {
-        form = await form.data()
-    }
-
-    if (form.isMega || form.isGiga) return null
+    const data = await axios.get(`pokemon-form/${props.pokemon}`)
+    const nature = await axios.get('pokemon-nature/random')
 
     // Bases
     let levelBase = 15
@@ -24,13 +13,13 @@ module.exports = async props => {
     let statBase = 0
 
     // Config
-    if (userIsVip) {
+    if (props.userIsVip) {
         levelBase += 5
         shinyBase += 15
         statBase += 15
         dynamaxBase += 40
     }
-    if (redeem) {
+    if (props.redeem) {
         levelBase += 10
         shinyBase += 30
         statBase = 27
@@ -38,25 +27,26 @@ module.exports = async props => {
     }
 
     // Props
-    pokemon.pokemon = form.name
+    pokemon.pokemon = data._id
+    pokemon.form = data.name
     pokemon.traits = {
-        gender: form.specie.setGender(),
-        nature: form.nature.random(),
+        gender: !data.specie.gender ? null : (Math.random() * 100 > data.specie.gender.male ? 'femenino' : 'masculino'),
+        nature: nature._id,
     }
     pokemon.status = {
         level: 1 + Math.ceil(Math.random() * levelBase),
-        friendship: form.specie._friendship,
+        friendship: data.specie.friendship,
         iv: 0,
     }
     pokemon.features = {
         isShiny: Math.random() < shinyBase / 4096,
         isDynamax: Math.random() < dynamaxBase / 100,
-        isLegendary: form.isLegendary,
-        isMythical: form.isMythical,
-        isUltraBeast: form.isUltraBeast,
+        isLegendary: data.features.isLegendary,
+        isMythical: data.features.isMythical,
+        isUltraBeast: data.features.isUltraBeast,
     }
     
-    Object.keys(form.stats).forEach(e => {
+    Object.keys(data.stats).forEach(e => {
         if (!pokemon.stats) pokemon.stats = {}
         pokemon.stats[e] = statBase + Math.floor(Math.random() * (32 - statBase))
         pokemon.status.iv += pokemon.stats[e]

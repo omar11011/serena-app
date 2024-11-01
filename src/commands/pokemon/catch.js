@@ -14,21 +14,21 @@ module.exports = new Command({
         const spawn = await memcached.getData(`spawn-${message.channel.id}`)
 
         if (!spawn) return message.react('❓')
-        if (answer !== spawn.pokemon.toLowerCase() && answer !== spawn.specie) return message.react('❌')
+        if (answer !== spawn.pokemon.toLowerCase() && answer !== spawn.specie.toLowerCase()) return message.react('❌')
 
         let pokemon = await createCapture({
-            data: { pokemon: spawn.pokemon },
+            pokemon: spawn.pokemon,
         })
 
         if (!pokemon) return
 
         pokemon.owner = props.user._id
-
-        await axios.create('pokemon', pokemon)
+        
+        await axios.create('pokemon-capture', pokemon)
         await memcached.deleteData(`spawn-${message.channel.id}`)
 
         return message.reply(createEmbed({
-            description: `¡Felicidades! Has capturado a ${pokemon.features.isShiny ? '⭐ ' : ''}**${pokemon.pokemon}** nivel ${pokemon.status.level}.`,
+            description: `¡Felicidades! Has capturado a ${pokemon.features.isShiny ? '⭐ ' : ''}**${pokemon.form}** nivel ${pokemon.status.level}.`,
         }))
     }
 })

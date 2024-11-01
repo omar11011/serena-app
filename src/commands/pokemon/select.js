@@ -17,32 +17,32 @@ module.exports = new Command({
         
         let page = Math.ceil(id / limit)
         let index = id - (page - 1) * limit - 1
-        let data = await axios.get(`pokemon/captures/${user._id}?page=${page}`)
+        let data = await axios.get(`pokemon-capture/user/${user._id}?page=${page}`)
         if (data.results.length < 1 || !data.results[index]) return message.react('❓')
 
         let pokemon = data.results[index]
         if (pokemon._id === user.pokemon) {
             return message.reply(createEmbed({
                 color: 'yellow',
-                description: `Ya tenías seleccionado a **${pokemon.traits.nickname || pokemon.pokemon}**.`,
+                description: `Ya tenías seleccionado a **${pokemon.pokemon.name}**.`,
             }))
         }
         
         if (user.pokemon) {
-            await axios.update('pokemon', {
+            await axios.update('pokemon-capture', {
                 _id: user.pokemon,
                 set: { 'options.isSelected': false },
             })
         }
 
-        await axios.update('pokemon', {
+        await axios.update('pokemon-capture', {
             _id: pokemon._id,
             set: { 'options.isSelected': true },
         })
         await user.setPokemon(pokemon._id)
 
         return message.reply(createEmbed({
-            description: `Acabas de seleccionar a **${pokemon.traits.nickname || pokemon.pokemon}** como compañero.`,
+            description: `Acabas de seleccionar a **${pokemon.pokemon.name}** como compañero.`,
         }))
     }
 })

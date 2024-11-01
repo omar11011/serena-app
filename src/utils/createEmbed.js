@@ -24,11 +24,14 @@ module.exports = props => {
     }
 
     if (props.attachment) {
-        let { url, format = 'png', setImage = true } = props.attachment
-        let imagen = new AttachmentBuilder(path.join(__dirname, `../assets/${url}.${format}`), { name: `image.${format}` })
-        if (setImage) embed.setImage(`attachment://image.${format}`)
-        else embed.setThumbnail(`attachment://image.${format}`)
-        files.push(imagen)
+        let { data, contentType, isThumbnail = false } = props.attachment
+        if (!contentType) contentType = 'png'
+
+        let img = new AttachmentBuilder(data, `data.${contentType}`)
+        if (!isThumbnail) embed.setImage(`attachment://data.${contentType}`)
+        else embed.setThumbnail(`attachment://data.${contentType}`)
+
+        files.push(img)
     }
 
     return {

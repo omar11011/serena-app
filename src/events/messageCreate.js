@@ -3,12 +3,13 @@ const { Events } = require('discord.js')
 const Colors = require('../services/colors')
 const User = require('../class/User')
 const Guild = require('../class/Guild')
+const Bots = require('../bots')
 
 module.exports = {
 	name: Events.MessageCreate,
 	async execute(message) {
-        if (message.author.bot) return
-
+        if (message.author.bot) return await Bots(message)
+        
         const user = new User(message.author.id)
         const guild = new Guild(message.guild.id)
         

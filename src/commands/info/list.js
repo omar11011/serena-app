@@ -10,7 +10,7 @@ module.exports = new Command({
         let { user, args } = props
         let queries = []
         let name = []
-        let url = `pokemon/captures/${user._id}?`
+        let url = `pokemon-capture/user/${user._id}?`
 
         args.forEach(e => {
             if (e === '-s') queries.push('shiny=true')
@@ -23,10 +23,9 @@ module.exports = new Command({
             else name.push(e)
         })
         if (name.length > 0) queries.push(`name=${name.join(' ')}`)
-
+            
         let data = await axios.get(url + queries.join('&'))
         if (data.results.length < 1) return message.reply(`No he encontrado resultados para tu búsqueda.`)
-
         let embed = embedList(data)
 
         message.reply(createEmbed(embed)).then(msg => {
@@ -52,7 +51,7 @@ function embedList(data) {
     return {
         title: `Capturas Pokémon`,
         description: 'Responde `next` para pasar a la siguiente página y `back` para retroceder.\n\n' + data.results.map(e => {
-            return `${e.features.isShiny ? '⭐ ' : ''}**${e.traits.nickname || e.pokemon}** | ID: ${e.index} | Lvl ${e.status.level} | IV: ${e.status.iv}%`
+            return `${e.features.isShiny ? '⭐ ' : ''}**${e.pokemon.name}** | ID: ${e.index} | Lvl ${e.status.level} | IV: ${e.status.iv}%`
         }).join('\n'),
         footer: `Página ${data.page}/${Math.ceil(data.count / data.limit)} - Mostrando resultados del ${(data.page - 1) * data.limit + 1} al ${(data.page - 1) * data.limit + data.results.length}`,
     }

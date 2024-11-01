@@ -1,5 +1,5 @@
 const Command = require('../../class/Command')
-const Data = require('../../data')
+const axios = require('../../services/axios')
 const createEmbed = require('../../utils/createEmbed')
 
 module.exports = new Command({
@@ -9,11 +9,11 @@ module.exports = new Command({
     cooldown: 4,
     execute: async (message, props) => {
         let move = props.args.join(' ')
-        let data = await Data.get('movement', move)
-        if (!data) return message.react('❓')
-        
-        data = data.data()
-        data.type = data.type.data()
+        let data = await axios.get(`pokemon-movement/${move}`)
+        if (data.error) return message.reply(createEmbed({
+            color: 'red',
+            description: data.error,
+        }))
 
         let effects = data.effects.map(e => {
             let stats = ['hp', 'attack', 'defense', 'spattack', 'spdefense', 'speed', 'accuracy', 'evasion']

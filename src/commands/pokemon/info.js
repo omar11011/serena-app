@@ -1,47 +1,33 @@
 const Command = require('../../class/Command')
 const axios = require('../../services/axios')
 const createEmbed = require('../../utils/createEmbed')
-const DATA = require('../../data')
+
+const calculateXpNeeded = require('../../functions/xpNeeded')
+const calculatePowers = require('../../functions/powerOfStats')
 
 module.exports = new Command({
     name: 'info',
     description: 'Muestra información de tu pokémon seleccionado o el último capturado.',
     execute: async (message, props) => {
-        let { user, args } = props
-        let pokemon = null
+        let pokemonId = props.user.pokemon
+        if (props.args.includes('latest')) {
+            let { results } = await axios.get(`pokemon-capture/user/${props.user._id}?latest=yes`)
+            if (results.length > 0) pokemonId = results[0]._id
+        }
+        let data = await axios.get(`pokemon-capture/${pokemonId}`)
 
-        if (args[0] && !isNaN(args[0]) && parseInt(args[0]) > 0) {
-            let id = parseInt(args[0])
-            let limit = 20
-            let page = Math.ceil(id / limit)
-            let index = id - (page - 1) * limit - 1
-            let data = await axios.get(`pokemon/captures/${user._id}?page=${page}`)
-            if (data.results.length < 1 || !data.results[index]) return message.react('❓')
-            pokemon = data.results[index]
-        }
-        else if (!args[0]) {
-            if (!user.pokemon) {
-                return message.reply(createEmbed({
-                    color: 'red',
-                    description: `No tienes ningún pokémon seleccionado.`,
-                }))
-            }
-            else pokemon = await axios.get(`pokemon/${user.pokemon}`)
-        }
-        if (!pokemon) return message.react('❓')
-            
-        let form = await DATA.get('form', pokemon.pokemon)
-        let powers = form.setStatsPower(pokemon)
-        form = await form.data()
+        if (!data) return message.reply(createEmbed({
+            color: 'red',
+            description: 'No tienes seleccionado ningún Pokémon.',
+        }))
         
-        let specie = await form.specie.data()
-        let xpNeeded = specie.growth.xpNeeded(pokemon.status.level)
+        let xpNeeded = calculateXpNeeded(data)
+        let statPowers = calculatePowers(data)
         
         let embed = {
-            color: form.type[0]._name,
-            title: (pokemon.features.isShiny ? '⭐ ' : '') + (pokemon.traits.nickname || pokemon.pokemon),
-            description: `Tu ${pokemon.pokemon} actualmente está en el nivel ${pokemon.status.level} y su XP es de ${pokemon.status.xp}/${xpNeeded}. ${pokemon.traits.gender ? 'Es de género ' + (pokemon.traits.gender === 'male' ? 'masculino' : 'femenino') : 'No tiene género'} y de naturaleza ${pokemon.traits.nature.toLowerCase()}.\nTiene ${pokemon.status.friendship} puntos de amistad contigo y su IV es de ${pokemon.status.iv}%.`,
-            fields: Object.keys(pokemon.stats).map(e => {
+            color: data.pokemon.type[0].name,
+            title: (data.features.isShiny ? '⭐ ' : '') + (data.traits.nickname || data.pokemon.name),
+            fields: Object.keys(data.stats).map(e => {
                 let name = 'Salud'
                 if (e === 'attack') name = 'Ataque'
                 else if (e === 'defense') name = 'Defense'
@@ -51,11 +37,12 @@ module.exports = new Command({
 
                 return {
                     name,
-                    value: `${powers[e]}\n${pokemon.stats[e]}/31\nEP: ${pokemon.effortValues[e]}/100`,
-                    inline: true }
+                    value: `${statPowers[e]}\n${data.stats[e]}/31\nEP: ${data.effortValues[e]}/100`,
+                    inline: true
+                }
             }),
-            image: form.image[pokemon.features.isShiny ? 'shiny' : 'default'],
-            footer: `Capturado el ${(new Date(pokemon.createdAt)).toLocaleDateString('es-ES', {
+            thumbnail: data.image,
+            footer: `Capturado el ${(new Date(data.createdAt)).toLocaleDateString('es-ES', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
@@ -64,6 +51,10 @@ module.exports = new Command({
                 hour12: true
             })}`
         }
+
+        embed.description = `Tu ${data.pokemon.name} actualmente está en el nivel ${data.status.level} y su XP es de ${data.status.xp}/${xpNeeded}.\n`
+        embed.description += `${data.traits.gender ? 'Es de género ' + data.traits.gender : 'No tiene género'} y es de naturaleza ${data.traits.nature.name.toLowerCase()}.\n`
+        embed.description += `Tiene ${data.status.friendship} puntos de amistad contigo y su IV es de ${data.status.iv}%.`
         
         return message.reply(createEmbed(embed))
     }
