@@ -1,6 +1,5 @@
 const Command = require('../../class/Command')
 const axios = require('../../services/axios')
-const createEmbed = require('../../utils/createEmbed')
 const calculateXpNeeded = require('../../functions/xpNeeded')
 
 module.exports = new Command({
@@ -9,16 +8,12 @@ module.exports = new Command({
     description: 'Entrena a tu Pokémon para que gane experiencia.',
     cooldown: 30,
     execute: async (message, props) => {
-        const embed = {}
-        if (!props.user.pokemon) {
-            embed.color = 'red'
-            embed.description = `No tienes seleccionado ningún Pokémon.`
-            return message.reply(createEmbed(embed))
-        }
+        if (!props.user.pokemon) return message.reply()
 
         const xp = Math.ceil(Math.random() * 15)
         const friendship = Math.random() > 0.8 ? 1 : 0
-        const pokemon = await axios.update('pokemon-capture', {
+
+        await axios.update('pokemon-capture', {
             _id: props.user.pokemon,
             inc: {
                 'status.xp': xp,
@@ -37,11 +32,9 @@ module.exports = new Command({
                 inc: { 'status.level': 1 },
             })
 
-            embed.description = `**${currentPokemon.traits.nickname || currentPokemon.pokemon.name}** ha alcanzado el nivel ${currentPokemon.status.level + 1}.`
-            return message.reply(createEmbed(embed))
+            return message.reply(`**${currentPokemon.traits.nickname || currentPokemon.pokemon.name}** ha alcanzado el nivel ${currentPokemon.status.level + 1}.`)
         }
 
-        embed.description = `**${currentPokemon.traits.nickname || currentPokemon.pokemon.name}** ha ganado ${xp} puntos de experiencia.`
-        return message.reply(createEmbed(embed))
+        return message.reply(`**${currentPokemon.traits.nickname || currentPokemon.pokemon.name}** ha ganado ${xp} puntos de experiencia.`)
     }
 })

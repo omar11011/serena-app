@@ -15,7 +15,7 @@ module.exports = {
         
         await user.load(message.author)
         await guild.load(message.guild)
-
+    
         let checkChannelPermissions = guild.checkChannelPermissions(message)
         if (!checkChannelPermissions) return
         
@@ -26,8 +26,8 @@ module.exports = {
             }
 
             if (message.content.length > 5) {
-                await user.addXP(1)
-                await guild.addXP(1)
+                await user.addXP(Math.ceil(Math.random() * 3))
+                await guild.addXP(Math.ceil(Math.random() * 3))
                 await guild.event(message, 1)
             }
             
@@ -39,6 +39,8 @@ module.exports = {
         const command = message.client.commands.find(e => e.name === nameCommand || e.alias.includes(nameCommand))
         
         if (!command) return
+        const userInEvent = await command.checkUserInEvent(message.author.id)
+        if (userInEvent) return message.reply(`No puedes usar este comando hasta que termine tu ${userInEvent}.`)
 
         const solveCaptcha = await command.solveCaptcha(message, message.author.id)
         if (!solveCaptcha) return

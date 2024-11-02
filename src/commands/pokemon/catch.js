@@ -1,7 +1,6 @@
 const Command = require('../../class/Command')
 const axios = require('../../services/axios')
 const memcached = require('../../services/memcached')
-const createEmbed = require('../../utils/createEmbed')
 const createCapture = require('../../utils/createCapture')
 
 module.exports = new Command({
@@ -16,9 +15,7 @@ module.exports = new Command({
         if (!spawn) return message.react('❓')
         if (answer !== spawn.pokemon.toLowerCase() && answer !== spawn.specie.toLowerCase()) return message.react('❌')
 
-        let pokemon = await createCapture({
-            pokemon: spawn.pokemon,
-        })
+        let pokemon = await createCapture({ pokemon: spawn.pokemon })
 
         if (!pokemon) return
 
@@ -27,8 +24,6 @@ module.exports = new Command({
         await axios.create('pokemon-capture', pokemon)
         await memcached.deleteData(`spawn-${message.channel.id}`)
 
-        return message.reply(createEmbed({
-            description: `¡Felicidades! Has capturado a ${pokemon.features.isShiny ? '⭐ ' : ''}**${pokemon.form}** nivel ${pokemon.status.level}.`,
-        }))
+        return message.reply(`¡Felicidades! Has capturado a ${pokemon.features.isShiny ? '⭐ ' : ''}**${pokemon.form}** nivel ${pokemon.status.level}.`)
     }
 })

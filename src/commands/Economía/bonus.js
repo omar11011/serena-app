@@ -15,8 +15,6 @@ module.exports = new Command({
             inc: { 'balance.money': money },
         })
 
-        return message.reply(createEmbed({
-            description: `Has ganado ${money} pokémonedas.`,
-        }))
+        return message.reply(`Has ganado ${money} pokémonedas.`)
     }
 })

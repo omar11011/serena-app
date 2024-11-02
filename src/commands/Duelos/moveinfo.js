@@ -10,10 +10,7 @@ module.exports = new Command({
     execute: async (message, props) => {
         let move = props.args.join(' ')
         let data = await axios.get(`pokemon-movement/${move}`)
-        if (data.error) return message.reply(createEmbed({
-            color: 'red',
-            description: data.error,
-        }))
+        if (data.error) return message.reply(data.error)
 
         let effects = data.effects.map(e => {
             let stats = ['hp', 'attack', 'defense', 'spattack', 'spdefense', 'speed', 'accuracy', 'evasion']

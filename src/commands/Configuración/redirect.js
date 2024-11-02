@@ -32,37 +32,20 @@ module.exports = new Command({
         if (drop) {
             const drop = await guild.dropSpawn(channel.id)
 
-            if (drop) {
-                return message.reply(createEmbed({
-                    description: `Se ha eliminado el canal <#${channel.id}> de los spawns del servidor.`,
-                }))
-            }
-            else {
-                return message.reply(createEmbed({
-                    color: 'red',
-                    description: `Este canal no formaba parte de los spawns del servidor.`,
-                }))
-            }
+            if (drop) return message.reply(`Se ha eliminado el canal <#${channel.id}> de los spawns del servidor.`)
+            
+            return message.reply(`Este canal no formaba parte de los spawns del servidor.`)
         }
         
         // Agregar canal
-        if (guild.channels.spawn.includes(channel.id)) {
-            return message.reply(createEmbed({
-                color: 'yellow',
-                description: `Este canal ya forma parte de los spawn del servidor.`,
-            }))
-        }
+        if (guild.channels.spawn.includes(channel.id)) return message.reply(`Este canal ya forma parte de los spawn del servidor.`)
+
         if ((!guild.isVip && guild.channels.spawn.length >= 2) || (guild.isVip && guild.channels.spawn.length >= 5)) {
-            return message.reply(createEmbed({
-                color: 'red',
-                description: `El servidor ya no puede tener más canales de spawn.`,
-            }))
+            return message.reply(`El servidor ya no puede tener más canales de spawn.`)
         }
 
         await guild.addSpawn(channel.id)
 
-        return message.reply(createEmbed({
-            description: `Has añadido el canal <#${channel.id}> a los spawns del servidor.`,
-        }))
+        return message.reply(`Has añadido el canal <#${channel.id}> a los spawns del servidor.`)
     }
 })

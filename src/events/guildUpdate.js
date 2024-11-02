@@ -5,16 +5,16 @@ module.exports = {
 	name: Events.GuildUpdate,
 	async execute(oldGuild, newGuild) {
         const newData = {}
-        console.log(oldGuild)
+        
         Object.keys(oldGuild).forEach(e => {
             newData[e] = newGuild[e]
         })
 
         if (Object.keys(newData).length > 0) {
-            // await axios.update('guild', {
-            //     userId: newGuild.id,
-            //     set: { discordData: newData },
-            // })
+            await axios.update('guild', {
+                guildId: newGuild.id,
+                set: { discordData: newData },
+            })
         }
 	},
 }

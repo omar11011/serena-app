@@ -1,11 +1,15 @@
 const megadb = require('megadb')
+const eventDB = new megadb.crearDB('events')
 const captchaDB = new megadb.crearDB('captcha')
+
 const axios = require('../services/axios')
+const memcached = require('../services/memcached')
 const createEmbed = require('../utils/createEmbed')
 
 module.exports = class Command {
     constructor(props) {
         this.name = props.name
+        this.category = props.category
         this.enabled = props.enabled === undefined ? true : props.enabled
         this.onlyAdmin = props.onlyAdmin === undefined ? false : props.onlyAdmin
         this.alias = props.alias || []
@@ -17,6 +21,8 @@ module.exports = class Command {
         this.mention = props.mention === undefined ? false : props.mention
         this.userPermissions = props.userPermissions || []
         this.botPermissions = props.botPermissions || []
+        this.useInTrade = props.useInTrade === undefined ? true : props.useInTrade
+        this.useInDuel = props.useInDuel === undefined ? true : props.useInDuel
         this.execute = props.execute || function() {
             console.log('No se ha definido una función para este comando')
         }
@@ -49,12 +55,12 @@ module.exports = class Command {
     }
 
     checkEnabled(role) {
-      if (role !== 'Owner' && role !== 'Programmer') return 'Este comando se encuentra deshabilitado temporalmente.'
+      if (!this.enabled && role !== 'Owner' && role !== 'Programmer') return 'Este comando se encuentra deshabilitado temporalmente.'
       return null
     }
 
     checkOnlyAdmin(role) {
-      if (role === 'Trainer') return 'Este comando sólo está habilitado para mis administradores.'
+      if (this.onlyAdmin && role === 'Trainer') return 'Este comando sólo está habilitado para mis administradores.'
       return null
     }
 
@@ -135,15 +141,30 @@ module.exports = class Command {
     async checkCooldown(user) {
       let error = null
       let now = Date.now()
-      let database = new megadb.crearDB(this.name, 'cooldowns')
-      let data = await database.obtener(user)
+      let data = null
+      let database = null
 
-      if (!data) await database.establecer(user, now)
+      if (this.cooldown >= 300) {
+        database = new megadb.crearDB(this.name, 'cooldowns')
+        data = await database.obtener(user)
+      }
+      else data = await memcached.getData(`cd-${this.name}-${user}`)
+
+      if (!data) {
+        if (database) await database.establecer(user, now)
+        else await memcached.createData({
+          key: `cd-${this.name}-${user}`,
+          data: now,
+          time: this.cooldown,
+        })
+      }
       else {
         let cooldownTime = this.cooldown * 1000
         let elapsedTime = now - data
 
-        if (elapsedTime > cooldownTime) await database.establecer(user, now)
+        if (elapsedTime > cooldownTime) {
+          if (database) await database.establecer(user, now)
+        }
         else {
           error = `Aún debes esperar`
           let timeRemaining = cooldownTime - elapsedTime
@@ -158,6 +179,16 @@ module.exports = class Command {
       }
 
       return error
+    }
+
+    async checkUserInEvent(user) {
+      const event = await eventDB.obtener(user)
+      if (!event) return false
+
+      if (event === 'trade' && !this.useInTrade) return 'intercambio'
+      else if (event === 'duel' && !this.useInDuel) return 'duelo'
+
+      return false
     }
 
     async check(message, props) {

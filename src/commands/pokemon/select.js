@@ -21,12 +21,7 @@ module.exports = new Command({
         if (data.results.length < 1 || !data.results[index]) return message.react('❓')
 
         let pokemon = data.results[index]
-        if (pokemon._id === user.pokemon) {
-            return message.reply(createEmbed({
-                color: 'yellow',
-                description: `Ya tenías seleccionado a **${pokemon.pokemon.name}**.`,
-            }))
-        }
+        if (pokemon._id === user.pokemon) return message.reply(`Ya tenías seleccionado a **${pokemon.pokemon.name}**.`)
         
         if (user.pokemon) {
             await axios.update('pokemon-capture', {
@@ -41,8 +36,6 @@ module.exports = new Command({
         })
         await user.setPokemon(pokemon._id)
 
-        return message.reply(createEmbed({
-            description: `Acabas de seleccionar a **${pokemon.pokemon.name}** como compañero.`,
-        }))
+        return message.reply(`Acabas de seleccionar a **${pokemon.pokemon.name}** como compañero.`)
     }
 })

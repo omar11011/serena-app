@@ -14,6 +14,7 @@ module.exports = new Command({
             let { results } = await axios.get(`pokemon-capture/user/${props.user._id}?latest=yes`)
             if (results.length > 0) pokemonId = results[0]._id
         }
+        if (!pokemonId) return message.react('❓')
         let data = await axios.get(`pokemon-capture/${pokemonId}`)
 
         if (!data) return message.reply(createEmbed({
